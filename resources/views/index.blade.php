@@ -13,11 +13,32 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+  <script>
+    $(function() {
+      $.scrollify({
+        section : ".scroll-section",
+        easing: "easeOutExpo",
+        scrollSpeed: 1100,
+        offset : 0,
+        scrollbars: false,
+        updateHash: false,
+        touchScroll:true,
+        before:function() {},
+        after:function() {},
+        afterResize:function() {},
+        afterRender:function() {}
+      });
+    });
+  </script>
+
 </head>
 
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
     <div class="container">
         <a class="navbar-brand" href="#"><span class="m-2 logo-text">QORE</span> <span style="font-size:0.7em; font-weight:normal;">Quantum Optoelectronics Research and Engineering</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +71,7 @@
 
 
   <!-- Services Section -->
-  <section class="page-section section services-section" id="services" style="height: 100vh; background-image: url('images/services-bg.jpg'); background-size: cover; background-position: center;">
+  <section class="page-section section services-section scroll-section" id="services" style="height: 100vh; background-image: url('images/services-bg.jpg'); background-size: cover; background-position: center;">
     <div class="container">
       <h2 class="mb-4">Our Services</h2>
       <div class="row">
@@ -87,7 +108,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="bg-light py-5">
+    <section id="portfolio" class="bg-light py-5 scroll-section">
       <div class="container">
         <h2 class="mb-4">Our Portfolio</h2>
         <div class="row">
@@ -123,7 +144,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-5">
+    <section id="testimonials" class="py-5 scroll-section">
       <div class="container">
         <h2 class="mb-4">What our clients say</h2>
         <div class="row">
@@ -163,7 +184,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-dark text-white">
+    <section id="contact" class="py-5 bg-dark text-white scroll-section">
       <div class="container">
         <div class="row">
           <div class="col-md-9">
