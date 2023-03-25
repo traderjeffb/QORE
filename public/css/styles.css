@@ -3,4 +3,32 @@
 
 .card {
     background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8); /* Add a drop shadow */
+  }
+
+  .services-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height of the section to the full viewport height */
+  }
+  .services-section h2 {
+    color: #ffffff; /* Set the color to white */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); /* Add a drop shadow */
+  }
+  .services-section .card:hover {
+    transform: translateY(-5px);
+    background-color: #fff;
+  }
+  .logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 5 rem;
+  }
+
+  .business-name {
+    font-size: 0.8rem;
+    margin-left: 5px;
+    color: #666;
   }
