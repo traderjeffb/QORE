@@ -36,9 +36,9 @@
 
 </head>
 
-<body>
+<body >
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+  <nav class="navbar fixed-top mb-2 navbar-expand-lg navbar-dark bg-dark " >
     <div class="container">
         <a class="navbar-brand" href="#"><span class="m-2 logo-text">QORE</span> <span style="font-size:0.7em; font-weight:normal;">Quantum Optoelectronics Research and Engineering</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,9 +49,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link" href="#services">Services</a>
                 </li>
@@ -64,6 +64,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                  </li>
             </ul>
         </div>
     </div>
@@ -108,34 +111,34 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="bg-light py-5 scroll-section">
-      <div class="container">
-        <h2 class="mb-4">Our Portfolio</h2>
-        <div class="row">
+    <section id="portfolio" class="gradient-section portfolio-section py-5 scroll-section">
+      <div class="container ">
+        <h2 class="mb-1 mt-5">Our Portfolio</h2>
+        <div class="row d-flex align-items-center">
           <div class="col-md-4">
             <div class="card mb-4">
-              <img src="img/portfolio-1.jpg" class="card-img-top" alt="...">
+              <img src="images/portfolio-1.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h4 class="card-title">Project 1</h4>
+                <h4 class="card-title">Tactile Laser Feedback</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor magna non gravida ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor magna non gravidipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor magna non gravid vehicula.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img src="images/portfolio-2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title">Subataomic Image Injection </h4>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor magna non gravida vehicula.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card mb-4">
-              <img src="img/portfolio-2.jpg" class="card-img-top" alt="...">
+              <img src="images/portfolio-3.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h4 class="card-title">Project 2</h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor magna non gravida vehicula.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4">
-              <img src="img/portfolio-3.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h4 class="card-title">Project 3</h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor magna non gravida vehicula.</p>
+                <h4 class="card-title">Cognitive Targeting</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. vehicula.</p>
               </div>
             </div>
           </div>
@@ -144,18 +147,21 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-5 scroll-section">
+    <section id="testimonials" class="py-5 pt-5 scroll-section testimonial-section gradient-section2">
       <div class="container">
-        <h2 class="mb-4">What our clients say</h2>
+        <h2 class="mb-4 mt-5">What our clients say</h2>
         <div class="row">
           <div class="col-md-4 mb-4">
             <div class="card">
               <div class="card-body">
-                <p class="card-text">"QORE's team of experts was able to provide us with innovative solutions that met our needs and exceeded our expectations. Their professionalism and expertise made them a pleasure to work with."</p>
+                <p class="card-text">"As a Pentagon official, I want to express my sincere gratitude to the team at QORE for their exceptional research work. QORE's insightful analysis and detailed reports have been instrumental in shaping our decision-making processes.
+
+                    Their ability to provide a comprehensive understanding of complex issues has been invaluable to our operations. I have been particularly impressed by their attention to detail and commitment to accuracy, which has helped us make informed and strategic decisions.
+                </p>
                 <div class="mt-3">
                   <img src="img/client-1.jpg" alt="" class="img-fluid rounded-circle mr-3">
                   <span class="text-primary">John Smith</span>
-                  <span>CEO, XYZ Company</span>
+                  <span> US Pentagon</span>
                 </div>
               </div>
             </div>
@@ -163,14 +169,19 @@
           <div class="col-md-4 mb-4">
             <div class="card">
               <div class="card-body">
-                <p class="card-text">"QORE's optoelectronic
+                <p class="card-text">"The QORE scientists are to be commended for their groundbreaking research that has the potential to transform the way we approach complex issues. Their innovative methods and tireless dedication to discovering new solutions have pushed the boundaries of scientific knowledge and opened up exciting new avenues for exploration. With their incredible breakthroughs and cutting-edge technologies, the QORE team has demonstrated the enormous potential of science to positively impact the world and create a better future for us all. Their work is truly inspiring and a testament to the power of human ingenuity and innovation."</p>
+                <div class="mt-3">
+                  <img src="img/client-2.jpg" alt="" class="img-fluid rounded-circle mr-3">
+                  <span class="text-primary">Jane Doe</span>
+                  <span>CTO, ABC Company</span>
                 </div>
+              </div>
             </div>
           </div>
           <div class="col-md-4 mb-4">
             <div class="card">
               <div class="card-body">
-                <p class="card-text">"We were very impressed with QORE's attention to detail and ability to understand our unique needs. Their customized solutions have helped us achieve our goals and improve our bottom line."</p>
+                <p class="card-text">"We were very impressed with QORE's attention to detail and ability to understand our unique needs. Their customized solutions have helped us achieve our goals and improve our bottom  Their customized solutions have helped us achieve our goals and improve our bottom line."</p>
                 <div class="mt-3">
                   <img src="img/client-2.jpg" alt="" class="img-fluid rounded-circle mr-3">
                   <span class="text-primary">Jane Doe</span>
@@ -184,11 +195,11 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-dark text-white scroll-section">
+    <section id="contact" class="py-5 pt-5 bg-dark text-white scroll-section">
       <div class="container">
         <div class="row">
           <div class="col-md-9">
-            <h2 class="mb-4">Contact Us</h2>
+            <h2 class="mb-2 mt-5">Contact Us</h2>
             <form>
               <div class="form-group">
                 <label for="name">Name</label>
@@ -206,7 +217,7 @@
             </form>
           </div>
           <div class="col-md-3">
-            <h2 class="mb-4">Visit Us</h2>
+            <h2 class="mb-2 mt-5">Visit Us</h2>
             <address>
               <strong>QORE</strong>
               <br>
