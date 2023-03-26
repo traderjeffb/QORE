@@ -26,3 +26,11 @@ Route::group(['prefix' => 'employees'], function () {
     Route::put('/{employee}', 'EmployeeController@update')->name('employees.update');
     Route::delete('/{employee}', 'EmployeeController@destroy')->name('employees.destroy');
 });
+
+Route::get('/research', function () {
+    return view('research');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

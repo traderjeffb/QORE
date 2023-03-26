@@ -65,7 +65,7 @@
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" href="../auth/login">Login</a>
                   </li>
             </ul>
         </div>
@@ -79,10 +79,12 @@
       <h2 class="mb-4">Our Services</h2>
       <div class="row">
         <div class="col-md-4">
+
           <div class="card">
             <div class="card-body">
               <i class="fas fa-microscope fa-3x mb-3"></i>
-              <h4 class="card-title">Research</h4>
+              <h4 class="card-title"><a class="underline-on-hover" href="research">Research</a>
+              </h4>
               <p class="card-text">Our team of experts conducts research in the field of quantum optoelectronics to explore new technologies and develop innovative devices.</p>
             </div>
           </div>
