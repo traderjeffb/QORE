@@ -1,78 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>QORE - Quantum Optoelectronics Research and Engineering</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css">
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
-  <script>
-    $(function() {
-      $.scrollify({
-        section : ".scroll-section",
-        easing: "easeOutExpo",
-        scrollSpeed: 1100,
-        offset : 0,
-        scrollbars: false,
-        updateHash: false,
-        touchScroll:true,
-        before:function() {},
-        after:function() {},
-        afterResize:function() {},
-        afterRender:function() {}
-      });
-    });
-  </script>
-
-</head>
-
-<body >
-  <!-- Navigation -->
-  <nav class="navbar fixed-top mb-2 navbar-expand-lg navbar-dark bg-dark " >
-    <div class="container">
-        <a class="navbar-brand" href="#"><span class="m-2 logo-text">QORE</span> <span style="font-size:0.7em; font-weight:normal;">Quantum Optoelectronics Research and Engineering</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li> --}}
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#testimonials">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../auth/login">Login</a>
-                  </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
+@section('content')
   <!-- Services Section -->
   <section class="page-section section services-section scroll-section" id="services" style="height: 100vh; background-image: url('images/services-bg.jpg'); background-size: cover; background-position: center;">
     <div class="container">
@@ -93,7 +21,8 @@
           <div class="card">
             <div class="card-body">
               <i class="fas fa-lightbulb fa-3x mb-3"></i>
-              <h4 class="card-title">Design</h4>
+              <h4 class="card-title"><a class="underline-on-hover" href="design">Design</a>
+              </h4>
               <p class="card-text">We design cutting-edge optoelectronic devices using the latest technologies and techniques to meet the needs of our clients.</p>
             </div>
           </div>
@@ -103,7 +32,8 @@
             <div class="card">
               <div class="card-body">
                 <i class="fas fa-cogs fa-3x mb-3"></i>
-                <h4 class="card-title">Engineering</h4>
+                <h4 class="card-title"><a class="underline-on-hover" href="engineering">Engineering</a>
+                </h4>
                 <p class="card-text">We specialize in engineering optoelectronic devices and systems for a wide range of applications, from telecommunications to medical imaging.</p>
               </div>
             </div>
@@ -122,7 +52,7 @@
               <img src="images/portfolio-1.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h4 class="card-title">Tactile Laser Feedback</h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor magna non gravida ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor magna non gravidipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor magna non gravid vehicula.</p>
+                <p class="card-text">A groundbreaking technology called Tactile Laser Feedback has been developed, which uses lasers to create a tactile sensation on the skin, allowing for the transmission of detailed information directly to the brain, potentially revolutionizing sensory perception and prosthetic design</p>
               </div>
             </div>
           </div>
@@ -131,7 +61,7 @@
               <img src="images/portfolio-2.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h4 class="card-title">Subataomic Image Injection </h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor magna non gravida vehicula.</p>
+                <p class="card-text">Subatomic Image Injection allows for the direct injection of highly detailed subatomic particles into the eyeball, revolutionizing our understanding of particle physics and the fundamental nature of reality.</p>
               </div>
             </div>
           </div>
@@ -140,7 +70,7 @@
               <img src="images/portfolio-3.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h4 class="card-title">Cognitive Targeting</h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. vehicula.</p>
+                <p class="card-text"> Cognitive Targeting useed to capture human thought  revolutionizing the precision of military operations</p>
               </div>
             </div>
           </div>
@@ -157,12 +87,10 @@
             <div class="card">
               <div class="card-body">
                 <p class="card-text">"As a Pentagon official, I want to express my sincere gratitude to the team at QORE for their exceptional research work. QORE's insightful analysis and detailed reports have been instrumental in shaping our decision-making processes.
-
-                    Their ability to provide a comprehensive understanding of complex issues has been invaluable to our operations. I have been particularly impressed by their attention to detail and commitment to accuracy, which has helped us make informed and strategic decisions.
                 </p>
                 <div class="mt-3">
-                  <img src="img/client-1.jpg" alt="" class="img-fluid rounded-circle mr-3">
-                  <span class="text-primary">John Smith</span>
+                  <img src="images/client-1.jpg" alt="" class="img-fluid rounded-circle mr-3">
+                  <span class="text-primary">John Smoltz</span>
                   <span> US Pentagon</span>
                 </div>
               </div>
@@ -171,11 +99,11 @@
           <div class="col-md-4 mb-4">
             <div class="card">
               <div class="card-body">
-                <p class="card-text">"The QORE scientists are to be commended for their groundbreaking research that has the potential to transform the way we approach complex issues. Their innovative methods and tireless dedication to discovering new solutions have pushed the boundaries of scientific knowledge and opened up exciting new avenues for exploration. With their incredible breakthroughs and cutting-edge technologies, the QORE team has demonstrated the enormous potential of science to positively impact the world and create a better future for us all. Their work is truly inspiring and a testament to the power of human ingenuity and innovation."</p>
+                <p class="card-text">"The QORE scientists are to be commended for their groundbreaking research that has the potential to transform the way we approach the philosophy of reality. Their innovative methods and tireless dedication to discovering new boundaries of scientific exploration. "</p>
                 <div class="mt-3">
-                  <img src="img/client-2.jpg" alt="" class="img-fluid rounded-circle mr-3">
-                  <span class="text-primary">Jane Doe</span>
-                  <span>CTO, ABC Company</span>
+                  <img src="images/client-2.jpg" alt="" class="img-fluid rounded-circle mr-3">
+                  <span class="text-primary">William Dosetta</span>
+                  <span>CEO, Everston Living</span>
                 </div>
               </div>
             </div>
@@ -185,9 +113,9 @@
               <div class="card-body">
                 <p class="card-text">"We were very impressed with QORE's attention to detail and ability to understand our unique needs. Their customized solutions have helped us achieve our goals and improve our bottom  Their customized solutions have helped us achieve our goals and improve our bottom line."</p>
                 <div class="mt-3">
-                  <img src="img/client-2.jpg" alt="" class="img-fluid rounded-circle mr-3">
-                  <span class="text-primary">Jane Doe</span>
-                  <span>CTO, ABC Company</span>
+                  <img src="images/client-3.jpg" alt="" class="img-fluid rounded-circle mr-3">
+                  <span class="text-primary">Jack Rospelt</span>
+                  <span>CTO, AnitMatter Masking Inc.</span>
                 </div>
               </div>
             </div>
@@ -258,8 +186,7 @@
     </div>
   </div>
 </footer>
-
-<!-- Bootstrap core JavaScript -->
+@endsection
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -270,6 +197,4 @@
 <!-- Custom scripts for this template -->
 <script src="js/creative.min.js"></script>
 
-</body>
 
-</html>
