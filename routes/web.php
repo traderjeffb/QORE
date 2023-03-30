@@ -17,12 +17,45 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::group(['prefix' => 'employees'], function () {
-    Route::get('/', 'EmployeeController@index')->name('employees.index');
-    Route::get('/create', 'EmployeeController@create')->name('employees.create');
-    Route::post('/', 'EmployeeController@store')->name('employees.store');
-    Route::get('/{employee}', 'EmployeeController@show')->name('employees.show');
-    Route::get('/{employee}/edit', 'EmployeeController@edit')->name('employees.edit');
-    Route::put('/{employee}', 'EmployeeController@update')->name('employees.update');
-    Route::delete('/{employee}', 'EmployeeController@destroy')->name('employees.destroy');
+// Route::group(['prefix' => 'employees'], function () {
+//     Route::get('/', 'EmployeeController@index')->name('employees.index');
+//     Route::get('/create', 'EmployeeController@create')->name('employees.create');
+//     Route::post('/', 'EmployeeController@store')->name('employees.store');
+//     Route::get('/{employee}', 'EmployeeController@show')->name('employees.show');
+//     Route::get('/{employee}/edit', 'EmployeeController@edit')->name('employees.edit');
+//     Route::put('/{employee}', 'EmployeeController@update')->name('employees.update');
+//     Route::delete('/{employee}', 'EmployeeController@destroy')->name('employees.destroy');
+// });
+
+Route::get('/research', function () {
+    return view('research');
 });
+Route::get('/design', function () {
+    return view('design');
+});
+Route::get('/engineering', function () {
+    return view('engineering');
+});
+
+Auth::routes();
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+Route::get('employees', [App\Http\Controllers\EmployeeController::class, 'index'])->name('employees');
+Route::get('employees/create', [App\Http\Controllers\EmployeeController::class, 'create'])->name('employees.create');
+Route::get('employees/store', [App\Http\Controllers\EmployeeController::class, 'store'])->name('employees.store');
+
+
+
+// Route::get('/employees/create', function () {
+//     return 'Hello World!';
+// });
+
+// Route::get('employees/create', [App\Http\Controllers\EmployeeController::class, 'create'])->name('employees/create');
+// Route::get('/employees/create', function () {
+//     return view('employees/create');
+// });
+// Route::post('/employees', 'EmployeeController@store')->name('employees.store');
