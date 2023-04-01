@@ -1,5 +1,6 @@
-
-
+body{
+    padding-top: 60px;
+}
 
 .card {
     background-color: rgba(255, 255, 255, 0.7);
@@ -38,10 +39,10 @@
 .portfolio-section {
 background-color: rgb(171, 95, 67);
 }
-.gradient-section {
+.gradient-1 {
     background: linear-gradient(to bottom, #eb8f27, #450303);
   }
-  .gradient-section2 {
+  .gradient-2 {
     background: linear-gradient(to bottom, #450303, #eb8f27);
   }
   .testimonial-section h2 {

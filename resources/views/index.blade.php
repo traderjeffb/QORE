@@ -43,7 +43,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="gradient-section portfolio-section py-5 scroll-section">
+    <section id="portfolio" class="gradient-1 portfolio-section py-5 scroll-section">
       <div class="container ">
         <h2 class="mb-1 mt-5">Our Portfolio</h2>
         <div class="row d-flex align-items-center">
@@ -79,7 +79,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-5 pt-5 scroll-section testimonial-section gradient-section2">
+    <section id="testimonials" class="py-5 pt-5 scroll-section testimonial-section gradient-2">
       <div class="container">
         <h2 class="mb-4 mt-5">What our clients say</h2>
         <div class="row">
