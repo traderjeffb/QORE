@@ -46,13 +46,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('employees', [App\Http\Controllers\EmployeeController::class, 'index'])->name('employees');
 Route::get('employees/create', [App\Http\Controllers\EmployeeController::class, 'create'])->name('employees.create');
-Route::get('employees/store', [App\Http\Controllers\EmployeeController::class, 'store'])->name('employees.store');
-
-
-
-// Route::get('/employees/create', function () {
-//     return 'Hello World!';
-// });
+Route::post('employees/store', [App\Http\Controllers\EmployeeController::class, 'store'])->name('employees.store');
+Route::get('employees/show/{id}', [App\Http\Controllers\EmployeeController::class, 'show'])->name('employees.show');
+Route::get('employees/edit/{id}', [App\Http\Controllers\EmployeeController::class, 'edit'])->name('employees.edit');
+Route::delete('employees/destroy/{id}', [App\Http\Controllers\EmployeeController::class, 'destroy'])->name('employees.destroy');
+Route::put('employees/update/{id}', [App\Http\Controllers\EmployeeController::class, 'update'])->name('employees.update');
 
 // Route::get('employees/create', [App\Http\Controllers\EmployeeController::class, 'create'])->name('employees/create');
 // Route::get('/employees/create', function () {
