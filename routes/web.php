@@ -52,8 +52,5 @@ Route::get('employees/edit/{id}', [App\Http\Controllers\EmployeeController::clas
 Route::delete('employees/destroy/{id}', [App\Http\Controllers\EmployeeController::class, 'destroy'])->name('employees.destroy');
 Route::put('employees/update/{id}', [App\Http\Controllers\EmployeeController::class, 'update'])->name('employees.update');
 
-// Route::get('employees/create', [App\Http\Controllers\EmployeeController::class, 'create'])->name('employees/create');
-// Route::get('/employees/create', function () {
-//     return view('employees/create');
-// });
-// Route::post('/employees', 'EmployeeController@store')->name('employees.store');
+
+Route::get('emails/newEmployee', [App\Http\Controllers\EmailsController::class, 'newEmployee'])->name('newEmployee');

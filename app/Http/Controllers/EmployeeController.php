@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\UploadedFile;
 use App\Models\Employee;
+use App\Events\NewEmployeeEvent;
+use Illuminate\Support\Facades\Event;
+
+
 
 
 
@@ -79,7 +83,7 @@ class EmployeeController extends Controller
         $employees->save();
         $latest_employee = Employee::latest()->first();
         $id = $latest_employee->id;
-        // dd($id);
+        event(new NewEmployeeEvent($latest_employee));
         // Redirect to the user's profile page
         return redirect()->route('employees.show', $id);
     }
