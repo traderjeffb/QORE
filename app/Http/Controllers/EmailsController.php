@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Mail\wecomeNewEmployee;
+use App\Mail\WelcomeNewEmployee;
+use Illuminate\Support\Facades\Mail;
+use App\Models\Employee;
+
+
 class EmailsController extends Controller
 {
     /**
@@ -11,9 +17,9 @@ class EmailsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function welcomeNewEmployee()
     {
-        //
+        return view('emails.welcomeNewEmployee');
     }
 
     /**
@@ -21,10 +27,23 @@ class EmailsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+
+    public function sendEmail(Request $request, $id)
     {
-        //
+        $employee = Employee::find($id);
+
+        if (!$employee) {
+            return redirect()->back()->with('error', 'Employee not found.');
+        }
+
+        $subject = $request->input('subject');
+        $message = $request->input('message');
+
+        Mail::to($employee->email)->send(new WelcomeNewEmployee($employee, $subject, $message));
+
+        return redirect()->back()->with('success', 'Email sent to employee.');
     }
+
 
     /**
      * Store a newly created resource in storage.

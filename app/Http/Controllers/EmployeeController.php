@@ -81,11 +81,14 @@ class EmployeeController extends Controller
 
         // Save the user to the database
         $employees->save();
-        $latest_employee = Employee::latest()->first();
-        $id = $latest_employee->id;
-        event(new NewEmployeeEvent($latest_employee));
+        $employee = Employee::latest()->first();
+        $id = $employee->id;
+
+        event(new NewEmployeeEvent($employee));
         // Redirect to the user's profile page
-        return redirect()->route('employees.show', $id);
+        // return redirect()->route('Mail.welcomeNewEmployee', $employee);
+        return view('emails.welcomeNewEmployee', ['employee' => $employee]);
+
     }
 
 

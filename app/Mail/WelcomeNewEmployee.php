@@ -34,8 +34,8 @@ class WelcomeNewEmployee extends Mailable
     public function build()
     {
         return $this->subject('Welcome to Our Company')
-            ->view('emails.newEmployee', ['employee' => $this->employee]);
-    }
+                    ->view('emails.welcomeNewEmployee', ['employee' => $this->employee]);
+    }/////
 }
 
 

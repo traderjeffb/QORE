@@ -53,4 +53,6 @@ Route::delete('employees/destroy/{id}', [App\Http\Controllers\EmployeeController
 Route::put('employees/update/{id}', [App\Http\Controllers\EmployeeController::class, 'update'])->name('employees.update');
 
 
-Route::get('emails/newEmployee', [App\Http\Controllers\EmailsController::class, 'newEmployee'])->name('newEmployee');
+Route::post('emails/sendEmail{employee}', [App\Http\Controllers\EmailsController::class, 'sendEmail'])->name('emails.sendEmail');
+
+Route::get('emails/welcomeNewEmployee', [App\Http\Controllers\EmailsController::class, 'welcomeNewEmployee'])->name('emails.WelcomeNewEmployee');
