@@ -56,3 +56,7 @@ Route::put('employees/update/{id}', [App\Http\Controllers\EmployeeController::cl
 Route::post('emails/sendEmail{employee}', [App\Http\Controllers\EmailsController::class, 'sendEmail'])->name('emails.sendEmail');
 
 Route::get('emails/welcomeNewEmployee', [App\Http\Controllers\EmailsController::class, 'welcomeNewEmployee'])->name('emails.WelcomeNewEmployee');
+
+//API Controller
+Route::get('api/index/{symbol?}', [App\Http\Controllers\ApiController::class, 'index'])->name('api.index');
+Route::get('api/apiList/{data}', [App\Http\Controllers\ApiController::class, 'apiList'])->name('api.apiList');
