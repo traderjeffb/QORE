@@ -52,8 +52,11 @@ Route::get('employees/edit/{id}', [App\Http\Controllers\EmployeeController::clas
 Route::delete('employees/destroy/{id}', [App\Http\Controllers\EmployeeController::class, 'destroy'])->name('employees.destroy');
 Route::put('employees/update/{id}', [App\Http\Controllers\EmployeeController::class, 'update'])->name('employees.update');
 
-// Route::get('employees/create', [App\Http\Controllers\EmployeeController::class, 'create'])->name('employees/create');
-// Route::get('/employees/create', function () {
-//     return view('employees/create');
-// });
-// Route::post('/employees', 'EmployeeController@store')->name('employees.store');
+
+Route::post('emails/sendEmail{employee}', [App\Http\Controllers\EmailsController::class, 'sendEmail'])->name('emails.sendEmail');
+
+Route::get('emails/welcomeNewEmployee', [App\Http\Controllers\EmailsController::class, 'welcomeNewEmployee'])->name('emails.WelcomeNewEmployee');
+
+//API Controller
+Route::get('api/index/{symbol?}', [App\Http\Controllers\ApiController::class, 'index'])->name('api.index');
+Route::get('api/apiList/{data}', [App\Http\Controllers\ApiController::class, 'apiList'])->name('api.apiList');
