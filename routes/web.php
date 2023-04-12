@@ -60,3 +60,9 @@ Route::get('emails/welcomeNewEmployee', [App\Http\Controllers\EmailsController::
 //API Controller
 Route::get('api/index/{symbol?}', [App\Http\Controllers\ApiController::class, 'index'])->name('api.index');
 Route::get('api/apiList/{data}', [App\Http\Controllers\ApiController::class, 'apiList'])->name('api.apiList');
+Route::post('api/daily', [App\Http\Controllers\ApiController::class, 'daily'])->name('api.daily');
+
+
+//CSV file download
+Route::get('csv/openAndCloseBrowser', [App\Http\Controllers\CSVController::class, 'openAndCloseBrowser'])->name('csv.openAndCloseBrowser');
+Route::get('csv', function () {  return view('csv.csv');});
