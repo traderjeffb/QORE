@@ -12,12 +12,12 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="..employees">Employees</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                    <a class="nav-link" href="../api/index">Stocks</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="#testimonials">Testimonials</a>
                 </li>
                 <li class="nav-item">
@@ -25,7 +25,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../login">Login</a>
-                  </li>
+                  </li> --}}
             </ul>
         </div>
     </div>

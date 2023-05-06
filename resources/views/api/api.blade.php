@@ -13,7 +13,7 @@
                                 <label for="symbol" class="col-md-4 col-form-label text-md-right">Ticker Symbol</label>
 
                                 <div class="col-md-6">
-                                    <input id="symbol" type="text" class="form-control @error('symbol') is-invalid @enderror" name="symbol" value="{{ old('symbol') }}" required autocomplete="symbol" autofocus>
+                                    <input id="symbol" type="text" class="form-control @error('symbol') is-invalid @enderror" name="symbol" required autocomplete="symbol" autofocus>
 
                                     @error('symbol')
                                     <span class="invalid-feedback" role="alert">
@@ -79,4 +79,12 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('script')
+<script>
+    document.getElementById("symbol").addEventListener("input", function() {
+        this.value = this.value.toUpperCase();
+    });
+</script>
 @endsection
