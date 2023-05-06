@@ -19,7 +19,12 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
-
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    ...
+  </script>
 
   <script>
     $(function() {
@@ -42,8 +47,12 @@
 </head>
 <body>
 
-    @include('layouts.navbar')
-        <main class="py-4">
+    @if (auth()->check())
+        @include('layouts.loggedInNavbar')
+    @else
+        @include('layouts.navbar')
+    @endif
+        <main class="">
             @yield('content')
         </main>
     </div>

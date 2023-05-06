@@ -17,15 +17,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-// Route::group(['prefix' => 'employees'], function () {
-//     Route::get('/', 'EmployeeController@index')->name('employees.index');
-//     Route::get('/create', 'EmployeeController@create')->name('employees.create');
-//     Route::post('/', 'EmployeeController@store')->name('employees.store');
-//     Route::get('/{employee}', 'EmployeeController@show')->name('employees.show');
-//     Route::get('/{employee}/edit', 'EmployeeController@edit')->name('employees.edit');
-//     Route::put('/{employee}', 'EmployeeController@update')->name('employees.update');
-//     Route::delete('/{employee}', 'EmployeeController@destroy')->name('employees.destroy');
-// });
 
 Route::get('/research', function () {
     return view('research');
@@ -41,7 +32,12 @@ Auth::routes();
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::view('/register', 'auth.register')->name('register');
+Route::view('/login', 'auth.login')->name('login');
 
+// Route::get('/login', function () {
+//         return view('auth/login');
+//     });
 
 
 Route::get('employees', [App\Http\Controllers\EmployeeController::class, 'index'])->name('employees');
@@ -65,4 +61,4 @@ Route::post('api/daily', [App\Http\Controllers\ApiController::class, 'daily'])->
 
 //CSV file download
 Route::get('csv/openAndCloseBrowser', [App\Http\Controllers\CSVController::class, 'openAndCloseBrowser'])->name('csv.openAndCloseBrowser');
-Route::get('csv', function () {  return view('csv.csv');});
+// Route::get('csv', function () {  return view('csv.csv');});
