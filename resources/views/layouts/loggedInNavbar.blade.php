@@ -12,7 +12,7 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="..employees">Employees</a>
+                    <a class="nav-link" href="/employees">Employees</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../api/index">Stocks</a>

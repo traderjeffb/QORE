@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <div class="card">
                     <div class="card-header">
                         Employee List
@@ -17,33 +17,43 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Image</th>
+                                    <th class="col-md-2">Image</th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>Phone Number</th>
-                                    <th>Job Title</th>
-                                    <th>Department</th>
-                                    <th>Action</th>
+                                    <th class="col-md-2">Phone Number</th>
+                                    <th class="col-md-1">Job Title</th>
+                                    <th class="col-md-1">Department</th>
+                                    <th class="col-md-2">Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody >
                                 @foreach ($employees as $employee)
                                     <tr>
-                                        <td>
-                                            <img src="{{ asset('storage/profile-images/' . $employee->profile_image) }}" alt="{{ $employee->name }}" class="img-fluid">
+                                        <td class="col-md-2">
+                                            <img src="{{ asset('storage/profile-images/' . $employee->profile_image) }}" alt="{{ $employee->name }}" class="img-fluid img-thumbnail w-50 align-middle"">
                                         </td>
-                                        <td>{{ $employee->name }}</td>
-                                        <td>{{ $employee->email }}</td>
-                                        <td>{{ $employee->phone_number }}</td>
-                                        <td>{{ $employee->job_title }}</td>
-                                        <td>{{ $employee->department }}</td>
-                                        <td class="w-25 text-center">
+                                        <td class="align-middle">{{ $employee->name }}</td>
+                                        <td class="align-middle">{{ $employee->email }}</td>
+                                        <td class="align-middle col-md-2">{{ $employee->phone_number }}</td>
+                                        <td class="align-middle">{{ $employee->job_title }}</td>
+                                        <td class="align-middle">{{ $employee->department }}</td>
+                                        {{-- <td class="w-25 text-center col-md-2">
                                             <div class="btn-group">
                                                 <a href="{{ route('employees.edit', $employee->id) }}" class="btn btn-primary d-inline-block m-2">Edit</a>
                                                 <form action="{{ route('employees.destroy', $employee->id) }}" method="POST" class="d-inline-block">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger m-2">Delete</button>
+                                                </form>
+                                            </div>
+                                        </td> --}}
+                                        <td class="w-25 text-center col-md-2 align-middle">
+                                            <div class="btn-group">
+                                                <a href="{{ route('employees.edit', $employee->id) }}" class="btn btn-primary d-inline-block m-2" style="height: 38px;">Edit</a>
+                                                <form action="{{ route('employees.destroy', $employee->id) }}" method="POST" class="d-inline-block">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger m-2" style="height: 38px;">Delete</button>
                                                 </form>
                                             </div>
                                         </td>
