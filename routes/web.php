@@ -35,18 +35,18 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::view('/register', 'auth.register')->name('register');
 Route::view('/login', 'auth.login')->name('login');
 
-// Route::get('/login', function () {
-//         return view('auth/login');
-//     });
 
 
-Route::get('employees', [App\Http\Controllers\EmployeeController::class, 'index'])->name('employees');
-Route::get('employees/create', [App\Http\Controllers\EmployeeController::class, 'create'])->name('employees.create');
-Route::post('employees/store', [App\Http\Controllers\EmployeeController::class, 'store'])->name('employees.store');
-Route::get('employees/show/{id}', [App\Http\Controllers\EmployeeController::class, 'show'])->name('employees.show');
-Route::get('employees/edit/{id}', [App\Http\Controllers\EmployeeController::class, 'edit'])->name('employees.edit');
-Route::delete('employees/destroy/{id}', [App\Http\Controllers\EmployeeController::class, 'destroy'])->name('employees.destroy');
-Route::put('employees/update/{id}', [App\Http\Controllers\EmployeeController::class, 'update'])->name('employees.update');
+Route::prefix('employees')->group(function () {
+    Route::get('/', [App\Http\Controllers\EmployeeController::class, 'index'])->name('employees');
+    Route::get('/create', [App\Http\Controllers\EmployeeController::class, 'create'])->name('employees.create');
+    Route::post('/store', [App\Http\Controllers\EmployeeController::class, 'store'])->name('employees.store');
+    Route::get('/show/{id}', [App\Http\Controllers\EmployeeController::class, 'show'])->name('employees.show');
+    Route::get('/edit/{id}', [App\Http\Controllers\EmployeeController::class, 'edit'])->name('employees.edit');
+    Route::delete('/destroy/{id}', [App\Http\Controllers\EmployeeController::class, 'destroy'])->name('employees.destroy');
+    Route::put('/update/{id}', [App\Http\Controllers\EmployeeController::class, 'update'])->name('employees.update');
+});
+
 
 
 Route::post('emails/sendEmail{employee}', [App\Http\Controllers\EmailsController::class, 'sendEmail'])->name('emails.sendEmail');
@@ -59,6 +59,12 @@ Route::get('api/apiList/{data}', [App\Http\Controllers\ApiController::class, 'ap
 Route::post('api/daily', [App\Http\Controllers\ApiController::class, 'daily'])->name('api.daily');
 
 
-//CSV file download
-Route::get('csv/openAndCloseBrowser', [App\Http\Controllers\CSVController::class, 'openAndCloseBrowser'])->name('csv.openAndCloseBrowser');
-// Route::get('csv', function () {  return view('csv.csv');});
+Route::prefix('modules')->group(function () {
+    Route::get('/', [App\Http\Controllers\ModulesController::class, 'index'])->name('modules');
+    Route::get('/create', [App\Http\Controllers\ModulesController::class, 'create'])->name('modules.create');
+    Route::post('/store', [App\Http\Controllers\ModulesController::class, 'store'])->name('modules.store');
+    Route::get('/show/{id}', [App\Http\Controllers\ModulesController::class, 'show'])->name('modules.show');
+    Route::get('/edit/{id}', [App\Http\Controllers\ModulesController::class, 'edit'])->name('modules.edit');
+    Route::delete('/destroy/{id}', [App\Http\Controllers\ModulesController::class, 'destroy'])->name('modules.destroy');
+    Route::put('/update/{id}', [App\Http\Controllers\ModulesController::class, 'update'])->name('modules.update');
+});
