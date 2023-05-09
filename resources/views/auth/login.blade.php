@@ -61,7 +61,7 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
-                                <a href="{{ route('register') }}" class="btn btn-primary ml-2">{{ __('Register') }}</a>
+                                <a class="ml-3" href="{{ route('register') }}" {{ __('Register') }}>Register</a>
                             </div>
                         </div>
                     </form>

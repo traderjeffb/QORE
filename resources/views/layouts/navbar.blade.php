@@ -23,7 +23,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ml-5">
                     <a class="nav-link" href="../login">Login</a>
                 </li>
                 <li class="nav-item">

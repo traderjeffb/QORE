@@ -6,25 +6,31 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Routing\Controller;
 use App\Models\Module;
+use App\Services\TotalAllMetals;
 
 
 class ModulesController extends Controller
 {
-    public function __construct()
+    protected $totalModuleService;
+
+    public function __construct(TotalAllMetals $totalAllMetals)
     {
         $this->middleware('auth');
+        $this->totalModuleService = $totalAllMetals;
     }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
 
+
+
+    public function index()
     {
-        $employees = Employee::all();
-        // dd($employees);
-        return view('employees.index', compact('employees'));
+        $totals = $this->totalModuleService->getTotal();
+
+        return view('modules.totals', compact('totals'));
     }
 
 

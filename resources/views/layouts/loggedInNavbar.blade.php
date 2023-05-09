@@ -17,15 +17,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../api/index">Stocks</a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="#testimonials">Testimonials</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="../modules/create">Create Module</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="../modules/index">Metal Totals</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../login">Login</a>
-                  </li> --}}
+                    <a class="nav-link" href="../sales/index">Sales</a>
+                  </li>
             </ul>
         </div>
     </div>

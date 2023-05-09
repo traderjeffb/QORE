@@ -60,7 +60,7 @@ Route::post('api/daily', [App\Http\Controllers\ApiController::class, 'daily'])->
 
 
 Route::prefix('modules')->group(function () {
-    Route::get('/', [App\Http\Controllers\ModulesController::class, 'index'])->name('modules');
+    Route::get('/index', [App\Http\Controllers\ModulesController::class, 'index'])->name('modules.index');
     Route::get('/create', [App\Http\Controllers\ModulesController::class, 'create'])->name('modules.create');
     Route::post('/store', [App\Http\Controllers\ModulesController::class, 'store'])->name('modules.store');
     Route::get('/show/{id}', [App\Http\Controllers\ModulesController::class, 'show'])->name('modules.show');
