@@ -7,35 +7,37 @@
       <h2 class="mb-4">Our Services</h2>
       <div class="row">
         <div class="col-md-4">
+        <a class="" href="research">
           <div class="card">
             <div class="card-body">
               <i class="fas fa-microscope fa-3x mb-3"></i>
-              <h4 class="card-title"><a class="underline-on-hover" href="research">Research</a>
-              </h4>
+              <h4 class="card-title">Research</h4>
               <p class="card-text">Our team of experts conducts research in the field of quantum optoelectronics to explore new technologies and develop innovative devices.</p>
             </div>
           </div>
+        </a>
         </div>
         <div class="col-md-4">
+        <a class="" href="design">
           <div class="card">
             <div class="card-body">
               <i class="fas fa-lightbulb fa-3x mb-3"></i>
-              <h4 class="card-title"><a class="underline-on-hover" href="design">Design</a>
-              </h4>
+              <h4 class="card-title">Design</h4>
               <p class="card-text">We design cutting-edge optoelectronic devices using the latest technologies and techniques to meet the needs of our clients.</p>
             </div>
           </div>
+        </a>
         </div>
-        <div class="col-md
         <div class="col-md-4">
+            <a class="" href="engineering">
             <div class="card">
               <div class="card-body">
                 <i class="fas fa-cogs fa-3x mb-3"></i>
-                <h4 class="card-title"><a class="underline-on-hover" href="engineering">Engineering</a>
-                </h4>
+                <h4 class="card-title">Engineering</h4>
                 <p class="card-text">We specialize in engineering optoelectronic devices and systems for a wide range of applications, from telecommunications to medical imaging.</p>
               </div>
             </div>
+            </a>
           </div>
         </div>
       </div>
@@ -73,6 +75,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

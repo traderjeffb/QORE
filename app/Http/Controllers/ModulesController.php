@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Routing\Controller;
 use App\Models\Module;
 use App\Services\TotalAllMetals;
-
+use PHPUnit\Util\Json;
 
 class ModulesController extends Controller
 {
@@ -15,7 +15,7 @@ class ModulesController extends Controller
 
     public function __construct(TotalAllMetals $totalAllMetals)
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
         $this->totalModuleService = $totalAllMetals;
     }
     /**
@@ -29,7 +29,7 @@ class ModulesController extends Controller
     public function index()
     {
         $totals = $this->totalModuleService->getTotal();
-
+        return json_encode($totals);///-----------------------------
         return view('modules.totals', compact('totals'));
     }
 
@@ -157,4 +157,12 @@ class ModulesController extends Controller
         return redirect()->route('employees')->with('success', 'Employee record deleted successfully.');
     }
 
+
+    public function totals()
+    {
+        $totals = $this->totalModuleService->getTotal();
+        // return json_encode($totals);///-----------------------------
+        dd($totals);
+        return view('modules.totals', compact('totals'));
+    }
 }

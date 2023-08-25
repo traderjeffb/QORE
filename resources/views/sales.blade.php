@@ -1,76 +1,68 @@
+<?php ?>
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-5">
+<div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Departments') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
                     <div class="container">
+                        <h2 class="mt-4 mb-4">Sales</h2>
                         <div class="row">
                           <div class="col-md-4">
-                          <a class="" href="researchHome">
+                          <a class="" href="../customer/index">
                             <div class="card">
                               <div class="card-body">
-                                <i class="fas fa-microscope fa-3x mb-3"></i>
-                                <h4 class="card-title">Research Department</h4>
+                                <i class="fa-solid fa-paperclip fa-3x mb-3"></i>
+                                <h4 class="card-title">Customers</h4>
                               </div>
                             </div>
                           </a>
                           </div>
                           <div class="col-md-4">
-                            <a class="" href="sales">
+                            <a class="" href="../projects/create-step-one">
                                 <div class="card">
                                 <div class="card-body">
                                     <i class="fas fa-lightbulb fa-3x mb-3"></i>
-                                    <h4 class="card-title">Sales Department</h4>
+                                    <h4 class="card-title">Start a Project</h4>
                                 </div>
                                 </div>
                             </a>
                           </div>
                           <div class="col-md-4">
-                            <a class="" href="engineering">
+                            <a class="" href="../modules/create">
                             <div class="card">
                               <div class="card-body">
-                                <i class="fas fa-cogs fa-3x mb-3"></i>
-                                <h4 class="card-title">Engineering Department</h4>
+                                <i class="fa-solid fa-hammer h-8 fa-3x mb-3"></i>
+                                <h4 class="card-title">Build Module</h4>
                               </div>
                             </div>
                             </a>
                           </div>
                           <div class="col-md-4 mt-4">
-                            <a class="" href="admin">
+                            <a class="" href="../customer/create">
                             <div class="card">
                               <div class="card-body">
-                                <i class="fas fa-list-check fa-3x mb-3"></i>
-                                <h4 class="card-title">Admin Department</h4>
+                                <i class="fa-solid fa-pen fa-3x mb-3"></i>
+                                <h4 class="card-title">Add Customer</h4>
                               </div>
                             </div>
                             </a>
                           </div>
                           <div class="col-md-4 mt-4">
-                            <a class="" href="hedging">
+                            <a class="" href="../modules/assign">
                             <div class="card">
                               <div class="card-body">
-                                <i class="fa-solid fa-money-bill-transfer fa-3x mb-3"></i>
-                                <h4 class="card-title">Hedging Department</h4>
+                                <i class="fa-solid fa-pen-to-square fa-3x mb-3"></i>
+                                <h4 class="card-title">Project Milestones</h4>
                               </div>
                             </div>
                             </a>
                           </div>
                           <div class="col-md-4 mt-4">
-                            <a class="" href="operations">
+                            <a class="" href="../employees">
                             <div class="card">
                               <div class="card-body">
-                                <i class="fa-solid fa-network-wired fa-3x mb-3"></i>
-                                <h4 class="card-title">Operations department</h4>
+                                <i class="fa-solid fa-calendar-days fa-3x mb-3"></i>
+                                <h4 class="card-title">Scheduling</h4>
                               </div>
                             </div>
                             </a>
@@ -85,3 +77,4 @@
     </div>
 </div>
 @endsection
+

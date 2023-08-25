@@ -1,16 +1,80 @@
+<?php ?>
 @extends('layouts.app')
 
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+                    <div class="container">
+                        <h2 class="mt-4 mb-4">Engineering</h2>
+                        <div class="row">
+                          <div class="col-md-4">
+                          <a class="" href="research">
+                            <div class="card">
+                              <div class="card-body">
+                                <i class="fa-solid fa-chart-simple fa-3x mb-3"></i>
+                                <h4 class="card-title">Current Market</h4>
+                              </div>
+                            </div>
+                          </a>
+                          </div>
+                          <div class="col-md-4">
+                            <a class="" href="../modules/totals">
+                                <div class="card">
+                                <div class="card-body">
+                                    <i class="fa-solid fa-calculator  fa-3x mb-3"></i>
+                                    <h4 class="card-title">Current Totals</h4>
+                                </div>
+                                </div>
+                            </a>
+                          </div>
+                          <div class="col-md-4">
+                            <a class="" href="../modules/create">
+                            <div class="card">
+                              <div class="card-body">
+                                <i class="fa-solid fa-hammer fa-3x mb-3"></i>
+                                <h4 class="card-title">Build Module</h4>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                          <div class="col-md-4 mt-4">
+                            <a class="" href="../modules/notes">
+                            <div class="card">
+                              <div class="card-body">
+                                <i class="fa-solid fa-pen fa-3x mb-3"></i>
+                                <h4 class="card-title">Project Notes</h4>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                          <div class="col-md-4 mt-4">
+                            <a class="" href="../modules/assign">
+                            <div class="card">
+                              <div class="card-body">
+                                <i class="fa-solid fa-pen-to-square fa-3x mb-3"></i>
+                                <h4 class="card-title">Assign Project</h4>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                          <div class="col-md-4 mt-4">
+                            <a class="" href="../employees">
+                            <div class="card">
+                              <div class="card-body">
+                                <i class="fa-solid fa-calendar-days fa-3x mb-3"></i>
+                                <h4 class="card-title">Scheduling</h4>
+                              </div>
+                            </div>
+                            </a>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
 
-@section
-  <div class="container-fluid p-0 m-0">
-    <div class="row m-0 p-0">
-      <div class="col-12 p-0 m-0 d-flex justify-content-center align-items-center position-relative">
-        <img src="../images/laserHand1.jpg" alt="Background Image" class="img-fluid position-absolute top-0 start-0 h-100 w-100" style="object-fit: cover; object-position: center;">
-        <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
-          <h1>My Title</h1>
-          <p>My text</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  @endsection
+</div>
+@endsection
+

@@ -8,9 +8,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link" href="/employees">Employees</a>
                 </li>
@@ -25,7 +25,15 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../sales/index">Sales</a>
-                  </li>
+                </li>
+                {{-- <li class="nav-item ml-4">
+                    <form method="post" action="logout" class="inline">
+                        <input type="hidden" name="logout_button" value="extra_submit_value">
+                        <button type="submit" name="submit_param" value="submit_value" class="link-button">
+                          Logout
+                        </button>
+                      </form>
+                </li> --}}
             </ul>
         </div>
     </div>
