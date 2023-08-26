@@ -18,38 +18,10 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        //
+                $projects = Projects::all();
+        // dd($eprojects);
+        return view('projects.index', compact('projects'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-// app/Http/Controllers/ProjectsController.php
-
-
-// app/Http/Controllers/ProjectsController.php
-
-
-public function create()
-{
-    $employees = Employee::all(); // Fetch all employees from the database
-
-    return view('projects.create', compact('employees'));
-
-}
-
-
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-// ProjectController.php
-
 
 
     public function store(Request $request)
@@ -142,12 +114,14 @@ public function create()
         $validatedData = $request->validate([
             'name' => 'required|unique:projects',
             'budget' => 'required|numeric',
+            'currency'=> 'required',
+            'country'=> 'required',
             'description' => 'required',
             'objectives' => 'required',
         ]);
 
         $project = new Projects($validatedData);
-
+// dd($project);
         $request->session()->put('project', $project);
 
 
@@ -180,44 +154,22 @@ public function create()
      *
      * @return \Illuminate\Http\Response
      */
-    // public function postCreateStepTwo(Request $request)
-    // {
-    //     $validatedData = $request->validate([
-    //         'objectives' => 'required',
-    //         'status' => 'required',
-    //     ]);
-
-    //     $projects = $request->session()->get('project');
-    //     $projects->fill($validatedData);
-    //     $request->session()->put('project', $projects);
-    //     $project = $request->session()->get('project');
-    //     // return redirect()->route('projects.create-step-three');
-    //     return view('projects.create-step-three', compact('project'));
-
-    // }
     public function postCreateStepTwo(Request $request)
 {
+    // dd($request);
     $validatedData = $request->validate([
         'status' => 'required',
-        'chemicals' => 'required',
+        'chemical' => 'required',
     ]);
-// dd($validatedData);
     $project = $request->session()->get('project');
 
     if ($project) {
         $project->fill($validatedData);
-        // dd($project);
         $request->session()->put('project', $project);
-
     }
-    $test = session()->get('project');
-    // dd($test);
 
     return view('projects.create-step-three', compact('project'));
 }
-
-
-
 
     /**
      * Show the step One Form for creating a new product.

@@ -62,7 +62,7 @@
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-calendar-days fa-3x mb-3"></i>
-                                <h4 class="card-title">Projects Schedules</h4>
+                                <h4 class="card-title">Research Schedules</h4>
                               </div>
                             </div>
                             </a>
@@ -70,7 +70,6 @@
                         </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

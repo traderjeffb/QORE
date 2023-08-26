@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1 class="mb-4">Project Initiation</h1>
-    <form action="{{ route('project.store') }}" method="post">
+    <form action="{{ route('sales.storeSale') }}" method="post">
         @csrf
 
         <!-- Step 1: Define Project Objectives -->

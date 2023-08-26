@@ -19,7 +19,6 @@ class DataController extends Controller
             // Handle the response
             dd($data['rates']['EUR']);
 
-
         }
 
         public function  getDates(){

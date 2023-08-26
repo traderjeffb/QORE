@@ -24,7 +24,10 @@
                             <th scope="col">Projet Description</th>
                             <th scope="col">Objectives</th>
                             <th scope="col">Budget</th>
+                            <th scope="col">Currency</th>
+                            <th scope="col">Country</th>
                             <th scope="col">Status</th>
+                            <th scope="col">Chemicals</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -35,10 +38,10 @@
                                 <td>{{$project->description}}</td>
                                 <td>{{$project->objectives}}</td>
                                 <td>{{$project->budget}}</td>
+                                <td>{{$project->currency}}</td>
+                                <td>{{$project->country}}</td>
                                 <td>{{$project->status ? 'Active' : 'DeActive'}}</td>
-                                <td>{{$project->chemicals}}</td>
-                                <td>{{$project->budget}}</td>
-
+                                <td>{{$project->chemical}}</td>
                             </tr>
                         @endforeach
                         </tbody>

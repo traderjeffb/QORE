@@ -116,17 +116,6 @@ Route::prefix('research')->group(function () {
         Route::put('/update/{id}', [App\Http\Controllers\CustomerController::class, 'update'])->name('customer.update');
     });
 
-    // Route::prefix('projects')->group(function () {
-    //     Route::get('/index', [App\Http\Controllers\ProjectsController::class, 'index'])->name('projects.index');
-    //     Route::get('/create', [App\Http\Controllers\ProjectsController::class, 'create'])->name('projects.create');
-    //     Route::post('/store', [App\Http\Controllers\ProjectsController::class, 'store'])->name('projects.store');
-    //     Route::get('/show/{id}', [App\Http\Controllers\ProjectsController::class, 'show'])->name('projects.show');
-    //     Route::get('/edit/{id}', [App\Http\Controllers\ProjectsController::class, 'edit'])->name('projects.edit');
-    //     Route::delete('/destroy/{id}', [App\Http\Controllers\ProjectsController::class, 'destroy'])->name('projects.destroy');
-    //     Route::put('/update/{id}', [App\Http\Controllers\ProjectsController::class, 'update'])->name('projects.update');
-
-
-    // Route::get('/create-step-one', [App\Http\Controllers\ProjectsController::class, 'createStepOne'])->name('projects.create-step-one');
     Route::prefix('projects')->group(function () {
         Route::get('/index', [App\Http\Controllers\ProjectsController::class, 'index'])->name('projects.index');
         Route::get('/create', [App\Http\Controllers\ProjectsController::class, 'create'])->name('projects.create');
@@ -146,21 +135,12 @@ Route::prefix('research')->group(function () {
 
     });
 
+    Route::prefix('sales')->group(function () {
+        Route::get('/project', [App\Http\Controllers\SalesController::class, 'project'])->name('project');
+        Route::post('/storeSale', [App\Http\Controllers\SalesController::class, 'storeSale'])->name('storeSale');
+        Route::get('/index', [App\Http\Controllers\SalesController::class, 'index'])->name('sales.index');
 
-
-
-//     Route::post('projects/create-step-one', 'ProjectsController@postCreateStepOne')->name('projects.create.step.one.post');
-
-//     Route::get('projects/create-step-two', 'ProjectsController@createStepTwo')->name('projects.create.step.two');
-//     Route::post('projects/create-step-two', 'ProjectsController@postCreateStepTwo')->name('projects.create.step.two.post');
-
-//     Route::get('projects/create-step-three', 'ProjectsController@createStepThree')->name('projects.create.step.three');
-//     Route::post('projects/create-step-three', 'ProjectsController@postCreateStepThree')->name('projects.create.step.three.post');
-
-// });
-
-
-
+    });
 
 
 

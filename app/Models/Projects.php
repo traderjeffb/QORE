@@ -9,7 +9,16 @@ class Projects extends Model
 {
     use HasFactory;
 
-protected $fillable = ['name','budget','description','objectives'];
+protected $fillable = ['name',
+'budget',
+'currency',
+'country',
+'description',
+'objectives',
+'status',
+'chemical',
+'fullyStaffed',
+];
 
     public function employee()
     {

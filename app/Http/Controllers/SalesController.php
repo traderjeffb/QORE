@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Sale;
+use App\Models\Projects;
 
 class SalesController extends Controller
 {
@@ -14,9 +14,9 @@ class SalesController extends Controller
      */
     public function index()
     {
-        $sales = Sale::all();
-        // dd($employees);
-        return view('sales.index', compact('sales'));
+        $projects = Projects::all();
+        // dd($projects);
+        return view('sales.index', compact('projects'));
     }
 
     /**
@@ -35,9 +35,9 @@ class SalesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeSale(Request $request)
     {
-        //
+        return view('Sales.index');
     }
 
     /**
@@ -83,5 +83,12 @@ class SalesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function project()
+    {
+        // $sales = Sale::all();
+        // dd($employees);
+        return view('sales.project');
     }
 }

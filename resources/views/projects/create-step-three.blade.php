@@ -23,6 +23,14 @@
                                     <td><strong>{{$project->budget}}</strong></td>
                                 </tr>
                                 <tr>
+                                    <td>Currency:</td>
+                                    <td><strong>{{$project->currency}}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Country</td>
+                                    <td><strong>{{$project->country}}</strong></td>
+                                </tr>
+                                <tr>
                                     <td>Project status:</td>
                                     <td><strong>{{$project->status ? 'Active' : 'DeActive'}}</strong></td>
                                 </tr>

@@ -48,11 +48,11 @@
                             </a>
                           </div>
                           <div class="col-md-4 mt-4">
-                            <a class="" href="../modules/assign">
+                            <a class="" href="../sales/index">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-pen-to-square fa-3x mb-3"></i>
-                                <h4 class="card-title">Project Milestones</h4>
+                                <h4 class="card-title">Sales Reports</h4>
                               </div>
                             </div>
                             </a>

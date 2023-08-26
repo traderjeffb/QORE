@@ -30,10 +30,9 @@
                                 <label class="radio-inline"><input type="radio" name="status" value="0" {{{ (isset($projects->status) && $projects->status == '0') ? "checked" : "" }}}>In Progress</label>
                                 <label class="radio-inline"><input type="radio" name="status" value="0" {{{ (isset($projects->FullyStaffed) && $projects->fullyStaffed == '0') ? "checked" : "" }}}>Completed</label>
                             </div>
-
                             <div class="form-group">
-                                <label for="chemical">chemical enviromental</label>
-                                <input type="text"  value="{{{ $projects->chemical ?? '' }}}" class="form-control" id="chemical" name="chemical"/>
+                                <label for="chemical">chemical</label>
+                                <input type="text" value="{{ $project->chemical ?? '' }}" class="form-control" id="chemical"  name="chemical" required>
                             </div>
                     </div>
                     <div class="card-footer">

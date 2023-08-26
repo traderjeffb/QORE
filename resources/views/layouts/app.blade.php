@@ -56,6 +56,7 @@
             @yield('content')
         </main>
     </div>
+    @yield('scripts')
 </body>
 <!-- Bootstrap core JavaScript -->
 {{-- <script src="vendor/jquery/jquery.min.js"></script> --}}
