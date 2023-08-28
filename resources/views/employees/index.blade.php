@@ -7,6 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         Employee List
+                        <a href="{{ route('employees.create')}}" class="btn btn-primary d-inline-block m-2 float-right" style="height: 38px;">Create Employee</a>
                     </div>
                     @if (session()->has('success'))
                         <div class="alert alert-success" id="success-alert">

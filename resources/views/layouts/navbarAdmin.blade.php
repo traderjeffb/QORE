@@ -2,7 +2,7 @@
 
 <nav class="navbar fixed-top mb-2 navbar-expand-lg navbar-dark bg-dark " >
     <div class="container">
-        <a class="navbar-brand" href="#"><span class="m-2 logo-text">QORE</span> <span style="font-size:0.7em; font-weight:normal;">Quantum Optoelectronics Research and Engineering</span></a>
+        <a class="navbar-brand" href="../home"><span class="m-2 logo-text">QORE</span> <span style="font-size:0.7em; font-weight:normal;">Quantum Optoelectronics Research and Engineering</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,9 +23,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="../login">Login</a>
-                  </li>
+                  </li> --}}
             </ul>
         </div>
     </div>
