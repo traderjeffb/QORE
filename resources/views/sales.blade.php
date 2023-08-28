@@ -58,7 +58,7 @@
                             </a>
                           </div>
                           <div class="col-md-4 mt-4">
-                            <a class="" href="../employees">
+                            <a class="" href="../sales/schedule">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-calendar-days fa-3x mb-3"></i>

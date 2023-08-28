@@ -91,4 +91,13 @@ class SalesController extends Controller
         // dd($employees);
         return view('sales.project');
     }
+
+    public function schedule()
+    {
+        return view ('sales.schedule');
+    }
+    public function scheduleRec()
+    {
+        return view ('sales.schedule');
+    }
 }

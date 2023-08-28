@@ -56,6 +56,7 @@
             @yield('content')
         </main>
     </div>
+    @stack('scripts')
     @yield('scripts')
 </body>
 <!-- Bootstrap core JavaScript -->

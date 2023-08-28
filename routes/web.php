@@ -6,6 +6,7 @@ use App\Http\Controllers\ResearchController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\CalendarController;
 
 use App\Models\ResearchProject;
 
@@ -68,7 +69,9 @@ Route::prefix('employees')->group(function () {
     Route::put('/update/{id}', [App\Http\Controllers\EmployeeController::class, 'update'])->name('employees.update');
 });
 
-
+Route::prefix('calendar')->group(function () {
+    Route::get('/', [App\Http\Controllers\CalendarController::class, '__invoke'])->name('Calendar');
+});
 
 Route::post('emails/sendEmail{employee}', [App\Http\Controllers\EmailsController::class, 'sendEmail'])->name('emails.sendEmail');
 
@@ -97,14 +100,14 @@ Route::get('/getDates', [App\Http\Controllers\DataController::class, 'getDates']
 Route::get('/totals', [App\Http\Controllers\ModulesController::class, 'totals'])->name('modules.totals');
 
 //--------------- Research
-Route::prefix('research')->group(function () {
-    Route::post('store', [App\Http\Controllers\ResearchController::class, 'store'])->name('research.store');
-    Route::get('/index', [App\Http\Controllers\ResearchController::class, 'index'])->name('index');
-    Route::get('create', [App\Http\Controllers\ResearchController::class, 'create'])->name('create');
-    Route::get('/indexPast', [App\Http\Controllers\ResearchController::class, 'indexPast'])->name('research.indexPast');
-    Route::get('/indexCurrent', [App\Http\Controllers\ResearchController::class, 'indexCurrent'])->name('research.indexCurrent');
-    Route::get('/researchPaper/{id}', [App\Http\Controllers\ResearchController::class, 'researchPaper'])->name('researchPaper');
-});
+    Route::prefix('research')->group(function () {
+        Route::post('store', [App\Http\Controllers\ResearchController::class, 'store'])->name('research.store');
+        Route::get('/index', [App\Http\Controllers\ResearchController::class, 'index'])->name('index');
+        Route::get('create', [App\Http\Controllers\ResearchController::class, 'create'])->name('create');
+        Route::get('/indexPast', [App\Http\Controllers\ResearchController::class, 'indexPast'])->name('research.indexPast');
+        Route::get('/indexCurrent', [App\Http\Controllers\ResearchController::class, 'indexCurrent'])->name('research.indexCurrent');
+        Route::get('/researchPaper/{id}', [App\Http\Controllers\ResearchController::class, 'researchPaper'])->name('researchPaper');
+    });
 
     Route::prefix('customer')->group(function () {
         Route::get('/index', [App\Http\Controllers\CustomerController::class, 'index'])->name('customer.index');
@@ -139,9 +142,12 @@ Route::prefix('research')->group(function () {
         Route::get('/project', [App\Http\Controllers\SalesController::class, 'project'])->name('project');
         Route::post('/storeSale', [App\Http\Controllers\SalesController::class, 'storeSale'])->name('storeSale');
         Route::get('/index', [App\Http\Controllers\SalesController::class, 'index'])->name('sales.index');
+        Route::get('/schedule', [App\Http\Controllers\SalesController::class, 'schedule'])->name('sales.schedule');
+        Route::POST('/scheduleRec', [App\Http\Controllers\SalesController::class, 'scheduleRec'])->name('sales.scheduleRec');
 
     });
-
+//---------------Calendar----------------//
+// Route::get('/', \App\Http\Controllers\CalendarController::class)->name('Calendar');
 
 
 
