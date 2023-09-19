@@ -9,7 +9,8 @@ class Projects extends Model
 {
     use HasFactory;
 
-protected $fillable = ['name',
+protected $fillable = [
+'name',
 'budget',
 'currency',
 'country',
@@ -23,5 +24,9 @@ protected $fillable = ['name',
     public function employee()
     {
         return $this->belongsTo(Employee::class);
+    }
+
+    public function units() {
+        return $this->belongsToMany(Unit::class);
     }
 }

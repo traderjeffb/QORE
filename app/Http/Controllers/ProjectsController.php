@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Projects;
 use App\Http\Controllers\EmployeeController;
 use App\Models\Employee;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -201,7 +202,7 @@ class ProjectsController extends Controller
     //     return redirect()->route('projects.index', compact('project'));
     // }
     public function postCreateStepThree(Request $request)
-{
+    {
     $project = $request->session()->get('project');
 
     if ($project) {
@@ -210,7 +211,9 @@ class ProjectsController extends Controller
     }
 
     $projects = Projects::all(); // Correct variable name
-// dd($projects);
     return redirect()->route('projects.index', compact('projects'));
-}
+    }
+
+
+
 }

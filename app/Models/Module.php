@@ -12,6 +12,7 @@ class Module extends Model
 
     protected $fillable = [
         'name',
+        'category',
         'gold',
         'silver',
         'platinum',
@@ -24,4 +25,8 @@ class Module extends Model
         'neodymium',
         'promethium',
     ];
+
+    public function units() {
+        return $this->belongsToMany(Unit::class);
+    }
 }

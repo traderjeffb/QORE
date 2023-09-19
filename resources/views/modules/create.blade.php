@@ -8,6 +8,16 @@
         <form method="POST" action="{{ route('modules.store') }}">
           @csrf
           <div class="form-group mt-2">
+            <label for="category"><h3>Category of Module</h3></label>
+            <select class="form-control" id="category" name="category" required>
+                <option value="Large Table">Large Tabletop</option>
+                <option value="Small Tabletop">Small Tabletop</option>
+                <option value="Large Linear">Large Linear Flat</option>
+                <option value="Small Linear">Small Linear Flat</option>
+                <option value="Rotating Spindle">Rotating Spindle</option>
+            </select>
+        </div>
+          <div class="form-group mt-2">
             <h3>Name of Module:</h3>
             <input type="text" class="form-control" id="name" name="name" required>
           </div>
@@ -85,7 +95,10 @@
               <label for="promethium">Promethium:</label>
               <input type="number" class="form-control" id="promethium" name="promethium" min="0" required>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-group d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
         </form>
       </div>
       </div>

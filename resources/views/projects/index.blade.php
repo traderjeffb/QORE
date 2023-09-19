@@ -7,11 +7,11 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">Manage Project</div>
+                <div class="card-header">Installation Projects</div>
 
                 <div class="card-body">
 
-                    <a href="{{ route('projects.create-step-one') }}" class="btn btn-primary pull-right">Create Project</a>
+                    <a href="{{ route('projects.create-step-one') }}" class="btn btn-primary pull-right mb-3">Create Installation Project</a>
 
                     @if (Session::has('message'))
                         <div class="alert alert-info">{{ Session::get('message') }}</div>

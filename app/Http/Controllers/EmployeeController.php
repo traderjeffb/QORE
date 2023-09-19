@@ -160,4 +160,6 @@ class EmployeeController extends Controller
         return redirect()->route('employees')->with('success', 'Employee record deleted successfully.');
     }
 
+
+
 }

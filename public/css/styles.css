@@ -61,3 +61,28 @@ background-color: rgb(171, 95, 67);
   a:link, a:visited, a:hover, a:active{
     text-decoration: none;
 }
+/* Custom CSS to make the active state brighter */
+.btn-primary.active {
+    background-color: #1f8bfd; /* Change to a brighter color of your choice */
+    border-color: #010b12; /* Change to match the background color */
+    /* You can also adjust other properties like text color if needed */
+}
+/* styles.css */
+.combined-total {
+    background-color: #f0f0f0; /* Add your desired background color here */
+    font-weight: bold;
+}
+.custom-box {
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    padding: 20px;
+}
+.dark-label {
+    color: #333; /* Dark gray color */
+}
+.heavy-gray-label {
+
+    color: #7c7c7c; /* Hexadecimal color code for medium gray */
+    font-weight: 800;
+}

@@ -21,6 +21,9 @@ class EventServiceProvider extends ServiceProvider
         NewEmployeeEvent::class => [
             SendWelcomeEmailToNewEmployee::class,
         ],
+        SaleMade::class => [
+            HandleSaleMade::class,
+        ],
 
     ];
 

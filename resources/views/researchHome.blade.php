@@ -32,7 +32,7 @@
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-hammer fa-3x mb-3"></i>
-                                <h4 class="card-title">Create a Research Project</h4>
+                                <h4 class="card-title">Start a Research Project</h4>
                               </div>
                             </div>
                             </a>
@@ -48,21 +48,21 @@
                             </a>
                           </div>
                           <div class="col-md-4 mt-4">
-                            <a class="" href="../modules/assign">
+                            <a class="" href="../research/createSummary">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-pen-to-square fa-3x mb-3"></i>
-                                <h4 class="card-title">Assign Project</h4>
+                                <h4 class="card-title">Create Research Summary</h4>
                               </div>
                             </div>
                             </a>
                           </div>
                           <div class="col-md-4 mt-4">
-                            <a class="" href="../research/create">
+                            <a class="" href="../research/activeIndex">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-calendar-days fa-3x mb-3"></i>
-                                <h4 class="card-title">Research Schedules</h4>
+                                <h4 class="card-title">Active Research</h4>
                               </div>
                             </div>
                             </a>
