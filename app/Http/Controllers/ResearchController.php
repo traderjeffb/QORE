@@ -73,9 +73,7 @@ class ResearchController extends Controller
     }
     public function edit($id)
     {
-        // $researchProject = ResearchProject::where('id', $id)->first();
         $researchProject = ResearchProject::find($id);
-        // dd($researchProject);
         return view('research.edit',compact('researchProject'));
     }
 
@@ -137,18 +135,6 @@ class ResearchController extends Controller
             $researchProject->approval_process = $validatedData['approval_process'];
             $researchProject->references = $validatedData['references'];
             $researchProject->additional_notes = $validatedData['additional_notes'];
-            // $researchProject->attachments = $validatedData['attachments'];
-
-            // if ($request->hasFile('attachments')) {
-            //     $attachments = [];
-            //     foreach ($request->file('attachments') as $attachment) {
-            //         $path = $attachment->store('attachments', 'local');
-            //         $researchProject->attachments = json_encode($attachments);
-            // // This will store the file in the 'attachments' directory
-            //         $attachments[] = $path;
-            //     }//to retrieve these files: $url = Storage::disk('local')->url($path);
-            //     $researchProject->attachments = $attachments;
-            // }
             if ($request->hasFile('attachments')) {
                 $attachments = [];
                 foreach ($request->file('attachments') as $attachment) {
@@ -161,24 +147,16 @@ class ResearchController extends Controller
             }
             $researchProject->status = $validatedData['status'];
 
-
-                // Create or retrieve your sale data here
-                $saleData = $researchProject;
-
                 // Dispatch the SaleMade event and pass the sale data
-                event(new SaleMade($saleData));
 
-
-            // Save the ResearchProject instance to the database
+// dd('Event dispatched');
             $researchProject->save();
-
-            // Redirect the user back to the form page with a success message
+            // dd($researchProject);
+            event(new SaleMade($researchProject));
             return redirect()->route('research.activeIndex')->with('success', 'Project added successfully!');
     }
     public function update(Request $request, $id)
     {
-        // Validate the form data
-        // dd($request);
         $request->validate([
             'title' => 'required|string',
             'description' => 'required|string',
@@ -223,6 +201,4 @@ class ResearchController extends Controller
         // Redirect back to the show page with a success message
         return redirect()->route('research.show', $researchProject->id)->with('success', 'Research project updated successfully.');
     }
-
-
 }

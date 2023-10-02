@@ -85,10 +85,7 @@
                 <option value="CAD">Canadian Dollar</option>
                 <option value="CHF">Swiss Franc</option>
             </select>
-            {{-- <div class="form-group">
-                <label for="currency">Currency Code:</label>
-                <input type="text" class="form-control" id="currency" name="currency" readonly>
-            </div> --}}
+
             <div class="form-group">
                 <label for="country">Country:</label>
                 <input type="text" class="form-control" id="country" name="country" readonly>
@@ -142,14 +139,13 @@
             <label for="additional_notes" class="form-label">Additional Notes</label>
             <textarea class="form-control" id="additional_notes" name="additional_notes" rows="4"></textarea>
         </div>
-                <!-- Status -->
-        <div class="mb-3">
-            <label for="status" class="form-label">Status</label>
-            <input type="text" class="form-control" id="status" name="status" required>
-        </div>
-
-
-        <!-- Attachments -->
+        <label for="status">Status:</label>
+        <select class="form-control" id="status" name="status">
+            <option value="Active">Active</option>
+            <option value="Pending">Pending</option>
+            <option value="Under Review">Under Review</option>
+            <option value="Complete">Complete</option>
+        </select>
         <div class="mb-3">
             <label for="attachments" class="form-label">Attachments</label>
             <input type="file" class="form-control" id="attachments" name="attachments[]" multiple>
@@ -161,11 +157,8 @@
 @endsection
 @section('scripts')
 
-{{-- find out why this needs to be here not loading from layouts.app-------------------------------------- --}}
-<!-- Include jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Include other scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
 <script src="https://www.gstatic.com/charts/loader.js"></script>
 
@@ -173,9 +166,8 @@
 
 <script>
 $(document).ready(function() {
-    // Get references to the relevant elements
     var currencyDropdown = $('#currency');
-    var currencyCodeInput = $('#currency'); // You should give this input a unique ID, e.g., 'currency_code'
+    var currencyCodeInput = $('#currency');
     var countryInput = $('#country');
 
     var currencyListData = {
@@ -185,12 +177,10 @@ $(document).ready(function() {
         'CHF': 'Switzerland',
     };
 
-    // Initialize the currency code and country based on the default value
     var defaultCurrency = currencyDropdown.val();
     currencyCodeInput.val(defaultCurrency);
     countryInput.val(currencyListData[defaultCurrency]);
 
-    // Listen for the change event on the currency dropdown
     currencyDropdown.on('change', function() {
         var selectedCurrency = $(this).val();
         currencyCodeInput.val(selectedCurrency);

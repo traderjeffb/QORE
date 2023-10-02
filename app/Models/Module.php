@@ -17,13 +17,7 @@ class Module extends Model
         'silver',
         'platinum',
         'palladium',
-        'scandium',
-        'yttrium',
-        'lanthanum',
-        'cerium',
-        'praseodymium',
-        'neodymium',
-        'promethium',
+
     ];
 
     public function units() {

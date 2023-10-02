@@ -1,7 +1,7 @@
 <?php
-
 namespace App\Events;
 
+use App\Models\Module;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -10,26 +10,17 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class SaleMade
+class ModuleCreated
 {
-
-
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    /**
-     * Create a new event instance.
-     *
-     * @return void
-     */
-    // use Dispatchable, SerializesModels;
+    public $module;
 
-    public $researchProject;
-
-    public function __construct($researchProject)
+    public function __construct($module)
     {
-        $this->researchProject = $researchProject;
+        // dd('here');
+        $this->module = $module;
     }
-
     /**
      * Get the channels the event should broadcast on.
      *

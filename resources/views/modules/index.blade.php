@@ -1,25 +1,36 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container col-md-10">
-    <div class="shadow p-3 mb-5 bg-white rounded">
-        <h3>Module List</h3>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Category</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($modules as $category => $name)
-                <tr>
-                    <td>{{ $name }}</td>
-                    <td>{{ $category }}</td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="shadow p-4">
+                <h3 class="mb-4">Module Totals List</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Gold</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Loop through your modules data here -->
+                        @foreach ($modules as $module)
+                        <tr>
+                            <td>{{ $module->name }}</td>
+                            <td>{{ $module->category }}</td>
+                            <td>{{ $module->gold }}</td>
+                            <td>{{ $module->silver }}</td>
+                            <td>{{ $module->gold }}</td>
+                            <td>{{ $module->gold }}</td>
+
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

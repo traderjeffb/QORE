@@ -38,11 +38,11 @@
                             </a>
                           </div>
                           <div class="col-md-4 mt-4">
-                            <a class="" href="../modules/notes">
+                            <a class="" href="../hedge/positionNotes">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fas fa-cogs fa-3x mb-3"></i>
-                                <h4 class="card-title">Position Notes</h4>
+                                <h4 class="card-title">Hedge Position Notes</h4>
                               </div>
                             </div>
                             </a>
@@ -52,7 +52,7 @@
                             <div class="card">
                               <div class="card-body">
                                 <i class="fas fa-cogs fa-3x mb-3"></i>
-                                <h4 class="card-title">Currency Hedging</h4>
+                                <h4 class="card-title">Hedging by Country</h4>
                               </div>
                             </div>
                             </a>

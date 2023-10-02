@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Installation Projects</div>
 
@@ -28,6 +28,7 @@
                             <th scope="col">Country</th>
                             <th scope="col">Status</th>
                             <th scope="col">Chemicals</th>
+                            <th scope="col">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -42,6 +43,10 @@
                                 <td>{{$project->country}}</td>
                                 <td>{{$project->status ? 'Active' : 'DeActive'}}</td>
                                 <td>{{$project->chemical}}</td>
+                                <td>
+                                    <a href="{{ route('projects.show', $project->id) }}" class="btn btn-primary btn-sm">View</a>
+                                    <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

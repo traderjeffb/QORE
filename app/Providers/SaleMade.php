@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace App\Providers;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -12,8 +12,6 @@ use Illuminate\Queue\SerializesModels;
 
 class SaleMade
 {
-
-
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     /**
@@ -21,13 +19,9 @@ class SaleMade
      *
      * @return void
      */
-    // use Dispatchable, SerializesModels;
-
-    public $researchProject;
-
-    public function __construct($researchProject)
+    public function __construct()
     {
-        $this->researchProject = $researchProject;
+        //
     }
 
     /**

@@ -94,6 +94,7 @@
                         <label class="form-label heavy-gray-label">Data Analysis</label>
                         <p>{{ $researchProject->data_analysis }}</p>
                     </div>
+
                 </div>
             </div>
         </div>

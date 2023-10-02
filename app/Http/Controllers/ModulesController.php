@@ -8,6 +8,8 @@ use Illuminate\Routing\Controller;
 use App\Models\Module;
 use App\Services\TotalAllMetals;
 use PHPUnit\Util\Json;
+use App\Events\ModuleCreated;
+use App\Models\PreciousMetalPrice;
 
 class ModulesController extends Controller
 {
@@ -24,16 +26,11 @@ class ModulesController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
-
      public function index()
      {
-         $modules = Module::all()->pluck('name', 'category');
-         return view('modules.index', compact('modules'));
+         $modules = Module::all();
+         return view('modules.index', ['modules' => $modules]);
      }
-
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -47,7 +44,6 @@ class ModulesController extends Controller
 
     public function store(Request $request)
     {
-        // Validate the request data
         $validatedData = $request->validate([
             'name' => 'required|max:255',
             'category'=> 'required',
@@ -55,16 +51,9 @@ class ModulesController extends Controller
             'silver' => 'required|numeric|min:0|max:99999',
             'platinum' => 'required|numeric|min:0|max:99999',
             'palladium' => 'required|numeric|min:0|max:99999',
-            'scandium' => 'required|numeric|min:0|max:99999',
-            'yttrium' => 'required|numeric|min:0|max:99999',
-            'lanthanum' => 'required|numeric|min:0|max:99999',
-            'cerium' => 'required|numeric|min:0|max:99999',
-            'praseodymium' => 'required|numeric|min:0',
-            'neodymium' => 'required|numeric|min:0',
-            'promethium' => 'required|numeric|min:0',
+
         ]);
 
-        // Create a new module with the validated data
         $module = new Module([
             'name' => $validatedData['name'],
             'category'=> $validatedData['category'],
@@ -72,25 +61,19 @@ class ModulesController extends Controller
             'silver' => $validatedData['silver'],
             'platinum' => $validatedData['platinum'],
             'palladium' => $validatedData['palladium'],
-            'scandium' => $validatedData['scandium'],
-            'yttrium' => $validatedData['yttrium'],
-            'lanthanum' => $validatedData['lanthanum'],
-            'cerium' => $validatedData['cerium'],
-            'praseodymium' => $validatedData['praseodymium'],
-            'neodymium' => $validatedData['neodymium'],
-            'promethium' => $validatedData['promethium'],
         ]);
-
-        // Save the new module to the database
+        event(new ModuleCreated($module));
         $module->save();
-
-        // Redirect back to the index page with a success message
-        return redirect()->route('modules.index')->with('success', 'Module created successfully!');
+        $modules = Module::all();
+        // $amounts = $this->totalModuleService->getTotal();
+        // $pricePerOz = PreciousMetalPrice::latest()->get();
+        // dd($amounts);
+         return view('modules.index', compact('modules'));
+        // ->with('success', 'Module created successfully!');
     }
 
     public function createUnit()
     {
-        // Fetch unique categories from the modules table
         $categories = Module::select('category')->distinct()->get();
 
         return view('modules.createUnit', compact('categories'));
@@ -99,8 +82,6 @@ class ModulesController extends Controller
     public function getModulesByCategory(Request $request)
     {
         $category = $request->input('category');
-
-        // Fetch modules based on the selected category
         $modules = Module::where('category', $category)->pluck('name', 'id');
 
         return response()->json($modules);
@@ -110,7 +91,7 @@ class ModulesController extends Controller
     {
         $totals = $this->totalModuleService->getTotal();
         // return json_encode($totals);///-----------------------------
-        dd($totals);
+        // dd($totals);
         return view('modules.totals', compact('totals'));
     }
 }

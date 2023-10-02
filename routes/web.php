@@ -79,9 +79,11 @@ Route::post('emails/sendEmail{employee}', [App\Http\Controllers\EmailsController
 Route::get('emails/welcomeNewEmployee', [App\Http\Controllers\EmailsController::class, 'welcomeNewEmployee'])->name('emails.WelcomeNewEmployee');
 
 //API Controller
-Route::get('api/index/{symbol?}', [App\Http\Controllers\ApiController::class, 'index'])->name('api.index');
-Route::get('api/apiList/{data}', [App\Http\Controllers\ApiController::class, 'apiList'])->name('api.apiList');
-Route::post('api/daily', [App\Http\Controllers\ApiController::class, 'daily'])->name('api.daily');
+
+
+Route::get('api/currencyExchangeRates', [App\Http\Controllers\ApiController::class, 'currencyExchangeRates'])->name('currencyExchangeRates');
+// Route::get('api/apiList/{data}', [App\Http\Controllers\ApiController::class, 'apiList'])->name('api.apiList');
+// Route::post('api/daily', [App\Http\Controllers\ApiController::class, 'daily'])->name('api.daily');
 
 
 Route::prefix('modules')->group(function () {
@@ -132,7 +134,7 @@ Route::get('/totals', [App\Http\Controllers\ModulesController::class, 'totals'])
         Route::get('/index', [App\Http\Controllers\ProjectsController::class, 'index'])->name('projects.index');
         Route::get('/create', [App\Http\Controllers\ProjectsController::class, 'create'])->name('projects.create');
         Route::post('/store', [App\Http\Controllers\ProjectsController::class, 'store'])->name('projects.store');
-        Route::get('/show/{id}', [App\Http\Controllers\ProjectsController::class, 'show'])->name('projects.show');
+        Route::get('/show/{project}', [App\Http\Controllers\ProjectsController::class, 'show'])->name('projects.show');
         Route::get('/edit/{id}', [App\Http\Controllers\ProjectsController::class, 'edit'])->name('projects.edit');
         Route::delete('/destroy/{id}', [App\Http\Controllers\ProjectsController::class, 'destroy'])->name('projects.destroy');
         Route::put('/update/{id}', [App\Http\Controllers\ProjectsController::class, 'update'])->name('projects.update');
@@ -165,8 +167,8 @@ Route::get('/totals', [App\Http\Controllers\ModulesController::class, 'totals'])
     Route::prefix('hedge')->group(function () {
         Route::get('/index', [App\Http\Controllers\HedgeController::class, 'index'])->name('hedge.index');
         Route::get('/currencyIndex', [App\Http\Controllers\HedgeController::class, 'currencyIndex'])->name('hedge.currencyIndex');
-        // Route::get('/benefits', [App\Http\Controllers\AdminController::class, 'benefits'])->name('hedge.benefits');
-        // Route::post('/storeBenefits', [App\Http\Controllers\AdminController::class, 'storeBenefits'])->name('hedge.storeBenefits');
+        Route::get('/positionNotes', [App\Http\Controllers\HedgeController::class, 'positionNotes'])->name('hedge.positionNotes');
+
     });
 
 

@@ -62,6 +62,7 @@
                                     <p>Name: {{ $contact->name }}</p>
                                     <p>Phone: {{ $contact->phone }}</p>
                                     <p>Department: {{ $contact->department }}</p>
+                                    <p class="line"></p>
                                     <!-- Add more contact details as needed -->
                                 @endforeach
                             </div>

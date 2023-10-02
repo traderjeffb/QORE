@@ -6,7 +6,6 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">Revenue by Country</div>
-
                 <div class="card-body">
                     <table class="table">
                         <thead class="thead-dark">

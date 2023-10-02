@@ -86,3 +86,6 @@ background-color: rgb(171, 95, 67);
     color: #7c7c7c; /* Hexadecimal color code for medium gray */
     font-weight: 800;
 }
+.line {
+    border-bottom: 1px solid #000; /* You can adjust the color and thickness as needed */
+}

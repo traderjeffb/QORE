@@ -9,7 +9,6 @@
             <input type="text" name="name" id="name" class="form-control">
         </div>
         <div class="module-fields">
-            <!-- Initial module selection fields go here -->
             <div class="row module-row">
                 <div class="col-md-3">
                     <div class="mb-3">
@@ -23,10 +22,9 @@
                 </div>
                 <div class="col-md-3">
                     <div class="mb-3">
-                        <div class="mb-3"> <!-- Wrap both label and dropdown in this div -->
+                        <div class="mb-3">
                             <label for="moduleDropdown" class="form-label">Select Module:</label>
                             <select class="form-select module-select" name="module">
-                                <!-- Dropdown options will be populated based on the selected category -->
                             </select>
                         </div>
                     </div>
@@ -49,17 +47,14 @@
     </form>
 </div>
 
-<!-- Add Bootstrap and jQuery scripts here -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    // JavaScript logic to handle category selection change
-    $('.category-select').on('change', function() {
+    $(document.body).on('change','.category-select', function() {
         const selectedCategory = $(this).val();
         const moduleSelect = $(this).closest('.module-row').find('.module-select');
 
-        // Make an AJAX call to fetch modules for the selected category
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -70,10 +65,8 @@
             method: 'GET',
             data: { category: selectedCategory },
             success: function(data) {
-                // Clear existing dropdown options
                 moduleSelect.empty();
 
-                // Populate the dropdown with new options
                 $.each(data, function(id, name) {
                     moduleSelect.append($('<option>', {
                         value: id,
@@ -87,7 +80,6 @@
         });
     });
 
-    // JavaScript logic to add more module selection fields when the "Add Module" button is clicked
     $('#addModuleBtn').on('click', function() {
         const moduleField = `
             <div class="row module-row">
@@ -121,11 +113,9 @@
             </div>
         `;
 
-        // Append the new module field to the form
         $('.module-fields:last').append(moduleField);
     });
 
-    // JavaScript logic to remove module selection fields when the "Remove" button is clicked
     $(document).on('click', '.remove-module-btn', function() {
         $(this).closest('.module-row').remove();
     });

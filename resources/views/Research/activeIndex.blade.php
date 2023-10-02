@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="card shadow"> <!-- Add 'shadow' class for drop shadow effect -->
                 <div class="card-header">Active Research Projects</div>
 
@@ -36,7 +36,6 @@
                                 <td>
                                     <a href="{{ route('research.show', $researchProject->id) }}" class="btn btn-primary btn-sm">View</a>
                                     <a href="{{ route('research.edit', $researchProject->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <!-- Add delete button or any other actions you need -->
                                 </td>
                             </tr>
                             @endforeach

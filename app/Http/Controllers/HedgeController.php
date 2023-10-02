@@ -8,6 +8,7 @@ use App\Models\Research;
 use App\Models\ResearchProject;
 use Illuminate\Support\Facades\DB;
 use App\ApiService;
+use App\Models\Hedge;
 
 
 
@@ -63,69 +64,19 @@ class HedgeController extends Controller
             // Return the view with the exchange rates
             return view('hedge.exchRateIndex', compact('exchangeRates'));
     }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function positionNotes(Request $request)
     {
-        //
+
+        $hedges = Hedge::all();
+        $totalUsdAmount = $hedges->sum('usd_amount');
+
+        return view('hedge.positionNotes', compact('hedges', 'totalUsdAmount'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+
 }

@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  <!-- Services Section -->
   <section class="page-section section services-section scroll-section" id="services" style="height: 100vh; background-image: url('images/services-bg.jpg'); background-size: cover; background-position: center;">
     <div class="container">
       <h2 class="mb-4">Our Services</h2>
@@ -43,7 +42,6 @@
       </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio" class="gradient-1 portfolio-section py-5 scroll-section">
       <div class="container ">
         <h2 class="mb-1 mt-5">Our Portfolio</h2>
@@ -80,7 +78,6 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section id="testimonials" class="py-5 pt-5 scroll-section testimonial-section gradient-2">
       <div class="container">
         <h2 class="mb-4 mt-5">What our clients say</h2>
@@ -126,7 +123,6 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-5 pt-5 bg-dark text-white scroll-section">
       <div class="container">
         <div class="row">
@@ -170,7 +166,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-light py-3">
       <div class="container">
         <div class="row">
@@ -192,11 +187,9 @@
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- Plugin JavaScript -->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-<!-- Custom scripts for this template -->
 <script src="js/creative.min.js"></script>
 
 
