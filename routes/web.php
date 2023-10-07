@@ -168,7 +168,7 @@ Route::get('/totals', [App\Http\Controllers\ModulesController::class, 'totals'])
         Route::get('/index', [App\Http\Controllers\HedgeController::class, 'index'])->name('hedge.index');
         Route::get('/currencyIndex', [App\Http\Controllers\HedgeController::class, 'currencyIndex'])->name('hedge.currencyIndex');
         Route::get('/positionNotes', [App\Http\Controllers\HedgeController::class, 'positionNotes'])->name('hedge.positionNotes');
-
+        Route::get('/preciousMetals', [App\Http\Controllers\HedgeController::class, 'preciousMetals'])->name('hedge.preciousMetals');
     });
 
 

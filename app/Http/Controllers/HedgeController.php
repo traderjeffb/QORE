@@ -9,6 +9,9 @@ use App\Models\ResearchProject;
 use Illuminate\Support\Facades\DB;
 use App\ApiService;
 use App\Models\Hedge;
+use App\Services\TotalAllMetals;
+use App\Services\PriceService;
+
 
 
 
@@ -17,11 +20,22 @@ class HedgeController extends Controller
 {
 
     protected $apiService;
+    protected $totalAllMetals;
+    protected $priceService;
 
-    public function __construct(ApiService $apiService)
+    public function __construct(ApiService $apiService, TotalAllMetals $totalAllMetals,PriceService $priceService)
     {
         $this->apiService = $apiService;
+        $this->totalAllMetals = $totalAllMetals;
+        $this->priceService = $priceService;
     }
+
+
+    // public function __construct(TotalAllMetals $totalAllMetals)
+    // {
+    //     // $this->middleware('auth');
+    //     $this->totalModuleService = $totalAllMetals;
+    // }
     /**
      * Display a listing of the resource.
      *
@@ -73,6 +87,13 @@ class HedgeController extends Controller
 
         return view('hedge.positionNotes', compact('hedges', 'totalUsdAmount'));
     }
+
+    public function preciousMetals(Request $request, PriceService $priceService)
+    {
+        $result = $priceService->calculatePriceAndTotal();
+        // dd($result);
+    }
+
 
 
 

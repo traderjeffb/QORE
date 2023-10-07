@@ -8,7 +8,7 @@
                         <h2 class="mt-4 mb-4">Hedging</h2>
                         <div class="row">
                           <div class="col-md-4">
-                          <a class="" href="../modules/index">
+                          <a class="" href="../hedge/preciousMetals">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-money-bill-trend-up fa-3x mb-3"></i>

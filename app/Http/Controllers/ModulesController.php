@@ -65,11 +65,8 @@ class ModulesController extends Controller
         event(new ModuleCreated($module));
         $module->save();
         $modules = Module::all();
-        // $amounts = $this->totalModuleService->getTotal();
-        // $pricePerOz = PreciousMetalPrice::latest()->get();
-        // dd($amounts);
+
          return view('modules.index', compact('modules'));
-        // ->with('success', 'Module created successfully!');
     }
 
     public function createUnit()

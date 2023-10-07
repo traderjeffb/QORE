@@ -12,7 +12,7 @@
                             <div class="card">
                               <div class="card-body">
                                 <i class="fas fa-microscope fa-3x mb-3"></i>
-                                <h4 class="card-title">Current Research</h4>
+                                <h4 class="card-title">Current Summaries</h4>
                               </div>
                             </div>
                           </a>
@@ -22,7 +22,7 @@
                                 <div class="card">
                                 <div class="card-body">
                                     <i class="fa-regular fa-newspaper fa-3x mb-3"></i>
-                                    <h4 class="card-title">Research Papers</h4>
+                                    <h4 class="card-title">All Research</h4>
                                 </div>
                                 </div>
                             </a>

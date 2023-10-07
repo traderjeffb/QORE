@@ -12,6 +12,9 @@
                             <th>Name</th>
                             <th>Category</th>
                             <th>Gold</th>
+                            <th>Silver</th>
+                            <th>platinum</th>
+                            <th>palladium</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -22,8 +25,8 @@
                             <td>{{ $module->category }}</td>
                             <td>{{ $module->gold }}</td>
                             <td>{{ $module->silver }}</td>
-                            <td>{{ $module->gold }}</td>
-                            <td>{{ $module->gold }}</td>
+                            <td>{{ $module->platinum }}</td>
+                            <td>{{ $module->palladium }}</td>
 
                         </tr>
                         @endforeach

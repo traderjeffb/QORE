@@ -41,8 +41,7 @@ class ApiService
     {
         // Define a unique cache key for this API endpoint
         $cacheKey = 'precious_metal_prices';
-
-        // Check if the data is already cached and if it has not expired
+// dd('here in right function');
         if (Cache::has($cacheKey)) {
             $cachedData = Cache::get($cacheKey);
 
@@ -53,19 +52,28 @@ class ApiService
                 return $cachedData; // Return the cached data
             }
         }
-
         $url = 'https://api.metalpriceapi.com/v1/latest?api_key=169179b29732685aff81833904dd8df1&base=USD&currencies=XAU,XAG,XPD,XPT';
 
 
         $response = Http::get($url)->json();
 
-        // Cache the response for 24 hours (1 day)
-        Cache::put($cacheKey, $response, Carbon::now()->addDay());
-        Cache::put($cacheKey . ':expiration', Carbon::now()->addDay(), Carbon::now()->addDay()); // Store the expiration time
+            $response['metals']['gold'] = $response['rates']['XAU'];
+            $response['metals']['silver'] = $response['rates']['XAG'];
+            $response['metals']['palladium'] = $response['rates']['XPD'];
+            $response['metals']['platinum'] = $response['rates']['XPT'];
 
-        return $response;
+            Cache::put($cacheKey, $response, Carbon::now()->addDay());
+            Cache::put($cacheKey . ':expiration', Carbon::now()->addDay(), Carbon::now()->addDay());
+            dd($response);
+            return($response);
+
+
     }
 }
+
+
+
+
 
 
 

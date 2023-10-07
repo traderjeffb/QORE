@@ -22,7 +22,7 @@
                                 <div class="card">
                                 <div class="card-body">
                                     <i class="fas fa-lightbulb fa-3x mb-3"></i>
-                                    <h4 class="card-title">Sell an Installation Project</h4>
+                                    <h4 class="card-title">Installation Project</h4>
                                 </div>
                                 </div>
                             </a>

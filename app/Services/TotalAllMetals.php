@@ -1,29 +1,20 @@
 <?php
-
 namespace App\Services;
 
 use App\Models\Module;
 
 class TotalAllMetals
 {
-    public function getTotal()
+    public function getTotal($metal)
     {
-        $modules = Module::all();
 
-        $totals = [
-            'gold' => 0,
-            'silver' => 0,
-            'platinum' => 0,
-            'palladium' => 0,
-        ];
 
-        foreach ($modules as $module) {
-            $totals['gold'] += $module->gold;
-            $totals['silver'] += $module->silver;
-            $totals['platinum'] += $module->platinum;
-            $totals['palladium'] += $module->palladium;
-        }
-// dd($totals);
-        return $totals;
+        $total = []; // Initialize the total to zero
+        $total[''.$metal.''] = Module::sum($metal);
+
+
+
+// dd($total);
+        return $total;
     }
 }
