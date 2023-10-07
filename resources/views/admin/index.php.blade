@@ -1,0 +1,40 @@
+<?php ?>
+
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <h1>Benefits List</h1>
+
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Employee ID</th>
+                <th scope="col">Compensation</th>
+                <th scope="col">Attendance</th>
+                <th scope="col">Performance Reviews</th>
+                <!-- Add columns for other benefit fields here -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($benefits as $benefit)
+            <tr>
+                <th scope="row">{{ $loop->iteration }}</th>
+                <td>{{ $benefit->employee_id }}</td>
+                <td>{{ $benefit->compensation }}</td>
+                <td>{{ $benefit->attendance }}</td>
+                <td>{{ $benefit->performance_reviews }}</td>
+                <!-- Add cells for other benefit fields here -->
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+@endsection

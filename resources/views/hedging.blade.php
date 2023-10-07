@@ -8,11 +8,11 @@
                         <h2 class="mt-4 mb-4">Hedging</h2>
                         <div class="row">
                           <div class="col-md-4">
-                          <a class="" href="research">
+                          <a class="" href="../hedge/preciousMetals">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-money-bill-trend-up fa-3x mb-3"></i>
-                                <h4 class="card-title">Hedging</h4>
+                                <h4 class="card-title">Precious Metals Hedging</h4>
                               </div>
                             </div>
                           </a>
@@ -38,21 +38,21 @@
                             </a>
                           </div>
                           <div class="col-md-4 mt-4">
-                            <a class="" href="../modules/notes">
+                            <a class="" href="../hedge/positionNotes">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fas fa-cogs fa-3x mb-3"></i>
-                                <h4 class="card-title">Position Notes</h4>
+                                <h4 class="card-title">Hedge Position Notes</h4>
                               </div>
                             </div>
                             </a>
                           </div>
                           <div class="col-md-4 mt-4">
-                            <a class="" href="../modules/assign">
+                            <a class="" href="../hedge/index">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fas fa-cogs fa-3x mb-3"></i>
-                                <h4 class="card-title">Currency Hedging</h4>
+                                <h4 class="card-title">Hedging by Country</h4>
                               </div>
                             </div>
                             </a>
@@ -62,7 +62,7 @@
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-calendar-days fa-3x mb-3"></i>
-                                <h4 class="card-title">Scheduling Hedging</h4>
+                                <h4 class="card-title">Current Market</h4>
                               </div>
                             </div>
                             </a>

@@ -11,20 +11,22 @@
   <title>QORE - Quantum Optoelectronics Research and Engineering</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  {{-- IDK about this link below. it's to fix creative.min  --}}
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-creative/5.1.5/js/creative.min.js">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/styles.css">
+  {{-- <link rel="stylesheet" href="/css/styles.css"> --}}
+  <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
   <script src="https://www.gstatic.com/charts/loader.js"></script>
-  <script>
-    google.charts.load('current', {packages: ['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-    ...
-  </script>
+
 
   <script>
     $(function() {
@@ -43,6 +45,8 @@
       });
     });
   </script>
+{{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 </head>
 <body>
@@ -71,16 +75,9 @@
 <!-- Plugin JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
 
-
-
-"
 <!-- Custom scripts for this template -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-creative/5.1.5/js/creative.min.js
-
-
-
-"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-creative/5.1.5/js/creative.min.js"></script>
 
 </html>

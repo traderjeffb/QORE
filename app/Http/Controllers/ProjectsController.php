@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Projects;
 use App\Http\Controllers\EmployeeController;
 use App\Models\Employee;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -69,7 +70,9 @@ class ProjectsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $project = Projects::find($id);
+        // dd($projects);
+        return view('projects.edit',compact('project'));
     }
 
     /**
@@ -81,7 +84,27 @@ class ProjectsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // dd('here in controller');
+        // $request->validate([
+        //     'title'=> 'required',
+        //     'description'=>'required',
+        // ]);
+        // dd($request);
+
+        $project = Projects::findOrFail($id);
+
+        $project->update([
+            'name'=> $request->input('name'),
+            'description'=> $request->input('description'),
+            'objectives'=>$request->input('objectives'),
+            'budget'=>$request->input('budget'),
+            'currency'=>$request->input('currency'),
+            'country'=>$request->input('country'),
+            'status'=>$request->input('status'),
+            'chemical'=>$request->input('chemical')
+        ]);
+// dd($project);
+        return redirect()->route('projects.show',compact('project'))->with('success', 'Research project updated successfully.');
     }
 
     /**
@@ -189,19 +212,9 @@ class ProjectsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function postCreateStepThree(Request $request)
-    // {
-    //     $project = $request->session()->get('project');
-    //     dd('$project');
-    //     $project->save();
 
-    //     $request->session()->forget('project');
-    //     $project = Projects::all();
-
-    //     return redirect()->route('projects.index', compact('project'));
-    // }
     public function postCreateStepThree(Request $request)
-{
+    {
     $project = $request->session()->get('project');
 
     if ($project) {
@@ -210,7 +223,9 @@ class ProjectsController extends Controller
     }
 
     $projects = Projects::all(); // Correct variable name
-// dd($projects);
     return redirect()->route('projects.index', compact('projects'));
-}
+    }
+
+
+
 }

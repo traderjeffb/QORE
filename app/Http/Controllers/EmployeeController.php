@@ -74,18 +74,11 @@ class EmployeeController extends Controller
         } else {
             $employees->profile_image = 'defaultImage.jpg'; // Set to the filename of your default image
         }
-
-
-
-        // Save the user to the database
         $employees->save();
-        $employee = Employee::latest()->first();
-        $id = $employee->id;
+        // $employee = Employee::latest()->first();
+        // $id = $employee->id;
 
-        event(new NewEmployeeEvent($employee));
-        // Redirect to the user's profile page
-        // return redirect()->route('Mail.welcomeNewEmployee', $employee);
-        return view('emails.welcomeNewEmployee', ['employee' => $employee]);
+        return redirect()->route('employees');
 
     }
 
@@ -159,5 +152,7 @@ class EmployeeController extends Controller
 
         return redirect()->route('employees')->with('success', 'Employee record deleted successfully.');
     }
+
+
 
 }

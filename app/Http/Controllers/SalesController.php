@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Projects;
+use App\Models\ResearchProject;
+use App\Models\Meeting;
 
 class SalesController extends Controller
 {
@@ -15,8 +17,10 @@ class SalesController extends Controller
     public function index()
     {
         $projects = Projects::all();
-        // dd($projects);
-        return view('sales.index', compact('projects'));
+        $researchProjects = ResearchProject::all();
+        $totalTable1 = $projects->sum('budget');
+        $totalTable2 = $researchProjects->sum('budget');
+        return view('sales.reports', compact('projects', 'researchProjects', 'totalTable1', 'totalTable2'));
     }
 
     /**
@@ -94,7 +98,8 @@ class SalesController extends Controller
 
     public function schedule()
     {
-        return view ('sales.schedule');
+        $events = Meeting::all();
+        return view ('sales.salesCalendar', compact ('events'));
     }
     public function scheduleRec()
     {

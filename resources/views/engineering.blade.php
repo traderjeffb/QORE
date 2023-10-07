@@ -18,11 +18,11 @@
                           </a>
                           </div>
                           <div class="col-md-4">
-                            <a class="" href="../modules/totals">
+                            <a class="" href="../modules/createUnit">
                                 <div class="card">
                                 <div class="card-body">
                                     <i class="fa-solid fa-calculator  fa-3x mb-3"></i>
-                                    <h4 class="card-title">Current Totals</h4>
+                                    <h4 class="card-title">Create Unit</h4>
                                 </div>
                                 </div>
                             </a>
@@ -48,11 +48,11 @@
                             </a>
                           </div>
                           <div class="col-md-4 mt-4">
-                            <a class="" href="../modules/assign">
+                            <a class="" href="../modules/index">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-pen-to-square fa-3x mb-3"></i>
-                                <h4 class="card-title">Assign Project</h4>
+                                <h4 class="card-title">Modules List</h4>
                               </div>
                             </div>
                             </a>

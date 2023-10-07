@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="d-flex justify-content-center align-items-center h-50 gradient-1">
+    <div class="d-flex justify-content-center align-items-center h-50 ">
         <div class="container bg-light p-3 shadow-lg mt-5" style="width: 50%;">
             <form method="POST" action="{{ route('employees.store') }}" enctype="multipart/form-data">
                 @csrf

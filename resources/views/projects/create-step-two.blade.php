@@ -26,9 +26,9 @@
 
                             <div class="form-group">
                                 <label for="description">Projects Status</label><br/>
-                                <label class="radio-inline"><input type="radio" name="status" value="1" {{{ (isset($projects->status) && $projects->status == '1') ? "checked" : "" }}}> Pending</label>
-                                <label class="radio-inline"><input type="radio" name="status" value="0" {{{ (isset($projects->status) && $projects->status == '0') ? "checked" : "" }}}>In Progress</label>
-                                <label class="radio-inline"><input type="radio" name="status" value="0" {{{ (isset($projects->FullyStaffed) && $projects->fullyStaffed == '0') ? "checked" : "" }}}>Completed</label>
+                                <label class="radio-inline"><input type="radio" name="status" value="Pending" {{{ (isset($projects->status) && $projects->status == '1') ? "checked" : "" }}}> Pending</label>
+                                <label class="radio-inline"><input type="radio" name="status" value="In-Progress" {{{ (isset($projects->status) && $projects->status == '0') ? "checked" : "" }}}>In Progress</label>
+                                <label class="radio-inline"><input type="radio" name="status" value="Completed" {{{ (isset($projects->FullyStaffed) && $projects->fullyStaffed == '0') ? "checked" : "" }}}>Completed</label>
                             </div>
                             <div class="form-group">
                                 <label for="chemical">chemical</label>

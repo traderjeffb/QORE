@@ -18,7 +18,7 @@
                           </a>
                           </div>
                           <div class="col-md-4">
-                            <a class="" href="#">
+                            <a class="" href="../admin/hr">
                                 <div class="card">
                                 <div class="card-body">
                                     <i class="fa-solid fa-lightbulb fa-3x mb-3"></i>

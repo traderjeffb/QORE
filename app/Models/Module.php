@@ -12,16 +12,15 @@ class Module extends Model
 
     protected $fillable = [
         'name',
+        'category',
         'gold',
         'silver',
         'platinum',
         'palladium',
-        'scandium',
-        'yttrium',
-        'lanthanum',
-        'cerium',
-        'praseodymium',
-        'neodymium',
-        'promethium',
+
     ];
+
+    public function units() {
+        return $this->belongsToMany(Unit::class);
+    }
 }

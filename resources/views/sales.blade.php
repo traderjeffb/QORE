@@ -22,17 +22,17 @@
                                 <div class="card">
                                 <div class="card-body">
                                     <i class="fas fa-lightbulb fa-3x mb-3"></i>
-                                    <h4 class="card-title">Start a Project</h4>
+                                    <h4 class="card-title">Installation Project</h4>
                                 </div>
                                 </div>
                             </a>
                           </div>
                           <div class="col-md-4">
-                            <a class="" href="../modules/create">
+                            <a class="" href="../modules/createUnit">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-hammer h-8 fa-3x mb-3"></i>
-                                <h4 class="card-title">Build Module</h4>
+                                <h4 class="card-title">Sell a Unit</h4>
                               </div>
                             </div>
                             </a>

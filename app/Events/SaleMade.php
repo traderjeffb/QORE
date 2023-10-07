@@ -10,8 +10,10 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class NewEmployeeEvent
+class SaleMade
 {
+
+
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     /**
@@ -19,9 +21,13 @@ class NewEmployeeEvent
      *
      * @return void
      */
-    public function __construct()
+    // use Dispatchable, SerializesModels;
+
+    public $researchProject;
+
+    public function __construct($researchProject)
     {
-        //
+        $this->researchProject = $researchProject;
     }
 
     /**

@@ -38,16 +38,6 @@
                                         <td class="align-middle col-md-2">{{ $employee->phone_number }}</td>
                                         <td class="align-middle">{{ $employee->job_title }}</td>
                                         <td class="align-middle">{{ $employee->department }}</td>
-                                        {{-- <td class="w-25 text-center col-md-2">
-                                            <div class="btn-group">
-                                                <a href="{{ route('employees.edit', $employee->id) }}" class="btn btn-primary d-inline-block m-2">Edit</a>
-                                                <form action="{{ route('employees.destroy', $employee->id) }}" method="POST" class="d-inline-block">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger m-2">Delete</button>
-                                                </form>
-                                            </div>
-                                        </td> --}}
                                         <td class="w-25 text-center col-md-2 align-middle">
                                             <div class="btn-group">
                                                 <a href="{{ route('employees.edit', $employee->id) }}" class="btn btn-primary d-inline-block m-2" style="height: 38px;">Edit</a>
