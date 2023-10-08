@@ -19,13 +19,13 @@
                 <option value="Small Tabletop">Mass Spectometer</option>
                 <option value="Large Linear">Flash Proton Recorder</option>
                 <option value="Small Linear">Computer</option>
-                <option value="Rotating Spindle">Camera</option>
-                <option value="Rotating Spindle">Particle Accelerator</option>
-                <option value="Rotating Spindle">Microscopic lens</option>
-                <option value="Rotating Spindle">Electomagmetoc Flow Meter</option>
-                <option value="Rotating Spindle">Robotic Arm</option>
-                <option value="Rotating Spindle">Subatomic grasp Tweezers</option>
-                <option value="Rotating Spindle">Microsopic Video</option>
+                <option value="Camera">Camera</option>
+                <option value="Particle Accelerator">Particle Accelerator</option>
+                <option value="Microscopic Lens">Microscopic lens</option>
+                <option value="Electromagnetic Flow Meter">Electomagmetoc Flow Meter</option>
+                <option value="Robotic Arm">Robotic Arm</option>
+                <option value="Subatomic Grasp Tweezer">Subatomic grasp Tweezers</option>
+                <option value="Microscopic Video">Microsopic Video</option>
 
             </select>
         </div>

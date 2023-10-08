@@ -170,7 +170,15 @@ Route::get('/totals', [App\Http\Controllers\ModulesController::class, 'totals'])
         Route::get('/positionNotes', [App\Http\Controllers\HedgeController::class, 'positionNotes'])->name('hedge.positionNotes');
         Route::get('/preciousMetals', [App\Http\Controllers\HedgeController::class, 'preciousMetals'])->name('hedge.preciousMetals');
     });
-
+    Route::prefix('engineering')->group(function () {
+        Route::get('/partsIndex', [App\Http\Controllers\EngineeringController::class, 'partsIndex'])->name('engineering.partsIndex');
+        Route::get('/createPart', [App\Http\Controllers\EngineeringController::class, 'createPart'])->name('engineering.createPart');
+        Route::post('/store', [App\Http\Controllers\EngineeringController::class, 'store'])->name('engineering.store');
+        Route::get('/show/{id}', [App\Http\Controllers\EngineeringController::class, 'show'])->name('engineering.show');
+        Route::get('/edit/{id}', [App\Http\Controllers\EngineeringController::class, 'edit'])->name('engineering.edit');
+        Route::delete('/destroy/{id}', [App\Http\Controllers\EngineeringController::class, 'destroy'])->name('part.destroy');
+        Route::put('/update/{id}', [App\Http\Controllers\EngineeringController::class, 'update'])->name('engineering.update');
+    });
 
 
 

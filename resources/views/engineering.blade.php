@@ -8,11 +8,11 @@
                         <h2 class="mt-4 mb-4">Engineering</h2>
                         <div class="row">
                           <div class="col-md-4">
-                          <a class="" href="research">
+                          <a class="" href="../engineering/partsIndex">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-chart-simple fa-3x mb-3"></i>
-                                <h4 class="card-title">Current Market</h4>
+                                <h4 class="card-title">Parts Index</h4>
                               </div>
                             </div>
                           </a>
@@ -38,11 +38,11 @@
                             </a>
                           </div>
                           <div class="col-md-4 mt-4">
-                            <a class="" href="../modules/notes">
+                            <a class="" href="../engineering/createPart">
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-pen fa-3x mb-3"></i>
-                                <h4 class="card-title">Project Notes</h4>
+                                <h4 class="card-title">Add/Remove/Edit Parts</h4>
                               </div>
                             </div>
                             </a>

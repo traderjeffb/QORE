@@ -44,8 +44,10 @@
                                 <td>{{$project->status ? 'Active' : 'DeActive'}}</td>
                                 <td>{{$project->chemical}}</td>
                                 <td>
-                                    <a href="{{ route('projects.show', $project->id) }}" class="btn btn-primary btn-sm">View</a>
-                                    <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <div class="btn-group" role="group">
+                                        <a href="{{ route('projects.show', $project->id) }}" class="btn btn-primary btn-sm mr-2">View</a>
+                                        <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-warning btn-sm mr-2">Edit</a>
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach
