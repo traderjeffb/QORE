@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Part extends Model
 {
     use HasFactory;
-    protected $fillable=['partNumber','category','description','inventory', 'caseSize','minimumInventory'];
+    protected $fillable=['partNumber','category','description','inventory', 'caseSize','minimumInventory', 'gold','silver','platinum','palladium'];
 }

@@ -176,7 +176,7 @@ Route::get('/totals', [App\Http\Controllers\ModulesController::class, 'totals'])
         Route::post('/store', [App\Http\Controllers\EngineeringController::class, 'store'])->name('engineering.store');
         Route::get('/show/{id}', [App\Http\Controllers\EngineeringController::class, 'show'])->name('engineering.show');
         Route::get('/edit/{id}', [App\Http\Controllers\EngineeringController::class, 'edit'])->name('engineering.edit');
-        Route::delete('/destroy/{id}', [App\Http\Controllers\EngineeringController::class, 'destroy'])->name('part.destroy');
+        Route::delete('/destroy/{id}', [App\Http\Controllers\EngineeringController::class, 'destroy'])->name('engineering.destroy');
         Route::put('/update/{id}', [App\Http\Controllers\EngineeringController::class, 'update'])->name('engineering.update');
     });
 

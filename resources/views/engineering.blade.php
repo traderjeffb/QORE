@@ -12,7 +12,7 @@
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-chart-simple fa-3x mb-3"></i>
-                                <h4 class="card-title">Parts Index</h4>
+                                <h4 class="card-title">Parts edit/view/delete</h4>
                               </div>
                             </div>
                           </a>
@@ -42,7 +42,7 @@
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-pen fa-3x mb-3"></i>
-                                <h4 class="card-title">Add/Remove/Edit Parts</h4>
+                                <h4 class="card-title">Add a New Part</h4>
                               </div>
                             </div>
                             </a>
@@ -52,7 +52,7 @@
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-pen-to-square fa-3x mb-3"></i>
-                                <h4 class="card-title">Modules List</h4>
+                                <h4 class="card-title">Add Parts to Inventory</h4>
                               </div>
                             </div>
                             </a>
@@ -62,7 +62,7 @@
                             <div class="card">
                               <div class="card-body">
                                 <i class="fa-solid fa-calendar-days fa-3x mb-3"></i>
-                                <h4 class="card-title">Scheduling</h4>
+                                <h4 class="card-title">Modules List</h4>
                               </div>
                             </div>
                             </a>

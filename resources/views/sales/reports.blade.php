@@ -23,7 +23,7 @@
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $project->name }}</td>
                                 <td>${{ number_format($project->budget, 2) }}</td>
-                                <td>{{ $project->Country }}</td>
+                                <td>{{ $project->country }}</td>
                             </tr>
                             @endforeach
                             <tr>
